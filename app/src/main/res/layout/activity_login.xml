@@ -25,7 +25,7 @@
         tools:layout_editor_absoluteY="51dp" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -33,14 +33,15 @@
         android:layout_marginBottom="80dp"
         android:background="@android:color/holo_blue_light"
         android:text="LOGIN"
+        android:onClick="login"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="372dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/username"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="Password"
@@ -49,7 +50,7 @@
         tools:layout_editor_absoluteY="307dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

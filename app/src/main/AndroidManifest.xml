@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".BerandaActivity" />
+        <activity android:name=".DataActivity"></activity>
     </application>
 
 </manifest>

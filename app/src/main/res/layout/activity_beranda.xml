@@ -20,24 +20,14 @@
         android:id="@+id/imageView3"
         android:layout_width="116dp"
         android:layout_height="124dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-<<<<<<< HEAD
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="114dp"
-=======
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="182dp"
->>>>>>> a7f6bad5ac986be2ff7e756ee3913c78b40b4422
         app:srcCompat="@drawable/nilai" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="118dp"
         android:layout_height="122dp"
-        android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/imageView3"
-        android:layout_marginEnd="72dp"
         app:srcCompat="@drawable/absensi" />
 
     <ImageView
@@ -45,7 +35,6 @@
         android:layout_width="115dp"
         android:layout_height="116dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/imageView3"
         android:layout_marginBottom="137dp"
         app:srcCompat="@drawable/data" />
 

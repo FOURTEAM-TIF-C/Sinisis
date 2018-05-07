@@ -19,7 +19,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".BerandaActivity" />
         <activity android:name=".DataActivity" />
-        <activity android:name=".PresensiActivity"></activity>
+        <activity android:name=".PresensiActivity" />
+        <activity android:name=".nILAIActivity"></activity>
     </application>
 
 </manifest>

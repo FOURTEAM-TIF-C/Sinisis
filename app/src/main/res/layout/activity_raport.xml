@@ -24,7 +24,8 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="46dp"
         android:text="Agama Islam"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editText"
@@ -44,7 +45,8 @@
         android:layout_alignStart="@+id/textView2"
         android:layout_marginTop="91dp"
         android:text="Matematika"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editText11"
@@ -94,7 +96,8 @@
         android:layout_alignStart="@+id/textView2"
         android:layout_marginTop="128dp"
         android:text="B. Indonesia"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView14"
@@ -104,7 +107,8 @@
         android:layout_alignStart="@+id/textView2"
         android:layout_marginTop="173dp"
         android:text="PKN"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView15"
@@ -114,7 +118,8 @@
         android:layout_alignStart="@+id/textView2"
         android:layout_marginTop="216dp"
         android:text="IPA"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editText15"
@@ -170,50 +175,51 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView2"
-        android:layout_marginBottom="229dp"
+        android:layout_centerVertical="true"
         android:text="IPS"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginBottom="188dp"
+        android:layout_alignBottom="@+id/editText16"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp"
         android:text="Olahraga"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginBottom="143dp"
+        android:layout_alignBottom="@+id/editText17"
+        android:layout_alignStart="@+id/textView17"
         android:text="B. Inggris"
-        android:textSize="16sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginBottom="98dp"
+        android:layout_alignBottom="@+id/editText18"
+        android:layout_alignStart="@+id/textView17"
         android:text="RAPORT"
-        android:textSize="20sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginBottom="50dp"
+        android:layout_alignBottom="@+id/editText19"
+        android:layout_alignStart="@+id/textView17"
         android:text="STATUS"
-        android:textSize="20sp"/>
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
 </RelativeLayout>

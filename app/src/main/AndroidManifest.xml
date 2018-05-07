@@ -20,7 +20,9 @@
         <activity android:name=".BerandaActivity" />
         <activity android:name=".DataActivity" />
         <activity android:name=".PresensiActivity" />
-        <activity android:name=".nILAIActivity"></activity>
+        <activity android:name=".nILAIActivity" />
+        <activity android:name=".NilaiActivity" />
+        <activity android:name=".RaportActivity"></activity>
     </application>
 
 </manifest>

@@ -57,9 +57,19 @@
         android:id="@+id/imageView4"
         android:layout_width="37dp"
         android:layout_height="33dp"
-        app:srcCompat="@drawable/presen"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="77dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133"
+        app:srcCompat="@drawable/presen" />
 
     <TextView
         android:id="@+id/textView5"
@@ -92,7 +102,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="PRESENSI"
+        android:text="RAPORT"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold"

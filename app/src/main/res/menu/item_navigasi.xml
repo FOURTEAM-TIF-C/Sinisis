@@ -15,7 +15,7 @@
             android:id="@+id/navigation3"
             android:checked="false"
             android:icon="@drawable/keluar"
-            android:title="@string/navigation_view_item_3" />
+            android:title="Keluar" />
 
 
     </group>

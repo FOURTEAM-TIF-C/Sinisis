@@ -9,19 +9,18 @@
     android:fitsSystemWindows="true"
     tools:context=".BerandaActivity">
 
-<RelativeLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".BerandaActivity"
     android:measureWithLargestChild="false"
     android:orientation="vertical">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/layout_toolbar" />
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -63,9 +62,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="97dp"
-        app:srcCompat="@drawable/raport" />
+        app:srcCompat="@drawable/nilai" />
 
 </RelativeLayout>
 
-
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/layout_header"
+        app:menu="@menu/item_navigasi" />
 </android.support.v4.widget.DrawerLayout>

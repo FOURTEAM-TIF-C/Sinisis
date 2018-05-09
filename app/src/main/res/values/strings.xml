@@ -5,4 +5,8 @@
     <string name="navigation_view_item_1">Pengaturan</string>
     <string name="navigation_view_item_2">Tentang</string>
     <string name="navigation_view_item_3">Keluar</string>
+    <string name="beranda">Beranda</string>
+    <!--<string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>-->
 </resources>

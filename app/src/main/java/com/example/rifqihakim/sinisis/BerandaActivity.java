@@ -1,70 +1,64 @@
 package com.example.rifqihakim.sinisis;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Build;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.annotation.RequiresApi;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Toast;
-import android.widget.Toolbar;
+import android.widget.ImageButton;
 
 public class BerandaActivity extends AppCompatActivity {
-
     //Mendefinisikan variabel
-    private android.support.v7.widget.Toolbar toolbar;
+    private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda);
 
-        // Menginisiasi Toolbar dan mensetting sebagai actionbar
-        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        ImageButton ImageButton = (ImageButton) findViewById(R.id.imageButton);
+        ImageButton ImageButton2 = (ImageButton) findViewById(R.id.imageButton2);
+        ImageButton ImageButton4 = (ImageButton) findViewById(R.id.imageButton4);
 
+        ImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent data = new Intent(getApplicationContext(), DataActivity.class);
+                startActivity(data);
+            }
+        });
+        ImageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent absensi = new Intent(getApplicationContext(), PresensiActivity.class);
+                startActivity(absensi);
+            }
+        });
+
+        ImageButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nilai = new Intent(getApplicationContext(), NilaiActivity.class);
+                startActivity(nilai);
+            }
+        });
+
+        // Menginisiasi Toolbar dan mensetting sebagai actionbar
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         // Menginisiasi  NavigationView
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         //Mengatur Navigasi View Item yang akan dipanggil untuk menangani item klik menu navigasi
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             // This method will trigger on item Click of navigation menu
 
-        ImageButton ImageButton = (ImageButton) findViewById(R.id.imageButton);
-        ImageButton ImageButton2 = (ImageButton) findViewById(R.id.imageButton2);
-        ImageButton ImageButton4 = (ImageButton) findViewById(R.id.imageButton4);
-
-//        ImageButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent data = new Intent(getApplicationContext(), DataActivity.class);
-//                startActivity(data);
-//            }
-//        });
-//        ImageButton2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent absensi = new Intent(getApplicationContext(), PresensiActivity.class);
-//                startActivity(absensi);
-//            }
-//        });
-//
-//        ImageButton4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent nilai = new Intent(getApplicationContext(), NilaiActivity.class);
-//                startActivity(nilai);
-//            }
-//        });
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 //Memeriksa apakah item tersebut dalam keadaan dicek  atau tidak,

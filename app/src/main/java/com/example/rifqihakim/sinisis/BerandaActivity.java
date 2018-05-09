@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ImageButton;
 
@@ -23,11 +24,11 @@ public class BerandaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda);
 
-        ImageButton ImageButton = (ImageButton) findViewById(R.id.imageButton);
+        Button Button234 = (Button) findViewById(R.id.button233);
 
 
 
-        ImageButton.setOnClickListener(new View.OnClickListener() {
+        Button234.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent data = new Intent(getApplicationContext(), DataActivity.class);

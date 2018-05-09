@@ -22,15 +22,7 @@ public class DataActivity extends AppCompatActivity {
                 startActivity(il);
             }
         });
-        Button button22 = (Button) findViewById(R.id.button22);
 
-        button22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent il= new Intent(getApplicationContext(),PresensiActivity.class);
-                startActivity(il);
-            }
-        });
 
 
     }

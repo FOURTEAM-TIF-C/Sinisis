@@ -24,7 +24,7 @@ public class BerandaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_beranda);
 
         ImageButton ImageButton = (ImageButton) findViewById(R.id.imageButton);
-        ImageButton ImageButton2 = (ImageButton) findViewById(R.id.imageButton2);
+
         ImageButton ImageButton4 = (ImageButton) findViewById(R.id.imageButton4);
 
         ImageButton.setOnClickListener(new View.OnClickListener() {
@@ -34,13 +34,7 @@ public class BerandaActivity extends AppCompatActivity {
                 startActivity(data);
             }
         });
-        ImageButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent absensi = new Intent(getApplicationContext(), PresensiActivity.class);
-                startActivity(absensi);
-            }
-        });
+
 
         ImageButton4.setOnClickListener(new View.OnClickListener() {
             @Override

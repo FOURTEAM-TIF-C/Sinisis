@@ -209,8 +209,9 @@
         android:layout_alignBottom="@+id/editText18"
         android:layout_alignStart="@+id/textView17"
         android:text="RAPORT"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView20"
@@ -219,7 +220,8 @@
         android:layout_alignBottom="@+id/editText19"
         android:layout_alignStart="@+id/textView17"
         android:text="STATUS"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

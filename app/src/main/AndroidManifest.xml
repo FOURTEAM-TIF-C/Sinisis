@@ -21,7 +21,8 @@
         <activity android:name=".DataActivity" />
         <activity android:name=".nILAIActivity" />
         <activity android:name=".NilaiActivity" />
-        <activity android:name=".RaportActivity"></activity>
+        <activity android:name=".RaportActivity" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>

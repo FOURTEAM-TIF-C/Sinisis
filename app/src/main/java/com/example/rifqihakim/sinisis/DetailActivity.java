@@ -12,24 +12,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class NilaiActivity extends AppCompatActivity {
+public class DetailActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nilai);
-        Button button356= (Button) findViewById(R.id.button211);
+        setContentView(R.layout.activity_detail);
+        Button button123 = (Button) findViewById(R.id.button211);
 
-        button356.setOnClickListener(new View.OnClickListener() {
+        button123.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
                 startActivity(il);
             }
         });
-
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -83,6 +82,5 @@ public class NilaiActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
-
     }
 }

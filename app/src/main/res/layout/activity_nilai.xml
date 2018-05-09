@@ -1,226 +1,151 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
-    <ImageView
-        android:id="@+id/imageView2"
+    android:fitsSystemWindows="true"
+    tools:context=".NilaiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:measureWithLargestChild="false"
+        android:orientation="vertical"
+        android:background="@drawable/background">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar" />
+
+        <Button
+            android:id="@+id/button211"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button7"
+            android:layout_marginBottom="54dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="B. INDO"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button9"
+            android:layout_alignTop="@+id/button211"
+            android:background="@android:color/holo_blue_dark"
+            android:text="SENI"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/button9"
+            android:layout_marginStart="91dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="AGAMA"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button7"
+            android:layout_marginTop="240dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="MAT"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="176dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="B. INGG"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button9"
+            android:layout_alignTop="@+id/button8"
+            android:background="@android:color/holo_blue_dark"
+            android:text="PENJAS"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button7"
+            android:layout_marginBottom="205dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="IPA"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button211"
+            android:layout_marginBottom="122dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="IPS"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button9"
+            android:layout_alignTop="@+id/button11"
+            android:background="@android:color/holo_blue_dark"
+            android:text="B. DAER"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button9"
+            android:layout_alignTop="@+id/button12"
+            android:background="@android:color/holo_blue_dark"
+            android:text="PKN"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/button6"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="108dp"
+            android:text="MATA PELAJARAN"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/background"
-         />
-
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:text="Nilai Tugas 1"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp" />
-
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="13dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="13dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText3"
-        android:layout_alignStart="@+id/textView3"
-        android:text="Nilai Tugas 2"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_alignLeft="@+id/textView3" />
-
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/textView3"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignLeft="@+id/editText2" />
-
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText6"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="59dp"
-        android:text="Nilai PR 1"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_marginLeft="59dp"
-        android:layout_alignParentLeft="true" />
-
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="14dp"
-        android:background="@android:color/holo_blue_light"
-        android:text="SIMPAN"
-        android:layout_alignRight="@+id/editText2" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText5"
-        android:layout_alignStart="@+id/textView5"
-        android:text="Nilai PR 2"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_alignLeft="@+id/textView5" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/textView5"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignLeft="@+id/editText2" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText4"
-        android:layout_alignStart="@+id/textView5"
-        android:text="Nilai UH 1"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_alignLeft="@+id/textView5" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/textView4"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignLeft="@+id/editText2" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText7"
-        android:layout_alignStart="@+id/textView5"
-        android:text="Nilai UH 2"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_alignLeft="@+id/textView5" />
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/editText4"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignLeft="@+id/editText2" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText8"
-        android:layout_alignStart="@+id/textView5"
-        android:text="Nilai UTS"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_alignLeft="@+id/textView5" />
-
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/editText7"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignLeft="@+id/editText2" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText9"
-        android:layout_alignStart="@+id/textView5"
-        android:text="Nilai UAS"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_alignLeft="@+id/textView5" />
-
-    <EditText
-        android:id="@+id/editText9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/editText8"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignLeft="@+id/editText2" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/textView6"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignLeft="@+id/editText2" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText10"
-        android:layout_alignEnd="@+id/textView3"
-        android:text="Rata-Rata"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:layout_alignRight="@+id/textView3" />
-
-    <EditText
-        android:id="@+id/editText10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/editText9"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignLeft="@+id/editText2" />
-
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/layout_header"
+        app:menu="@menu/item_navigasi" />
+</android.support.v4.widget.DrawerLayout>

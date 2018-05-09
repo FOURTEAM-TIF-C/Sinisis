@@ -25,7 +25,7 @@ public class BerandaActivity extends AppCompatActivity {
 
         ImageButton ImageButton = (ImageButton) findViewById(R.id.imageButton);
 
-        ImageButton ImageButton4 = (ImageButton) findViewById(R.id.imageButton4);
+
 
         ImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,13 +36,7 @@ public class BerandaActivity extends AppCompatActivity {
         });
 
 
-        ImageButton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nilai = new Intent(getApplicationContext(), NilaiActivity.class);
-                startActivity(nilai);
-            }
-        });
+
 
         // Menginisiasi Toolbar dan mensetting sebagai actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);

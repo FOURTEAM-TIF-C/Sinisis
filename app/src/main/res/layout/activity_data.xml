@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".DataActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:measureWithLargestChild="false"
+            android:orientation="vertical"
+            android:background="@drawable/background">
         <include
             android:id="@+id/toolbar"
             layout="@layout/layout_toolbar" />
@@ -22,8 +28,7 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/background"
-                android:measureWithLargestChild="false"
+
                 android:orientation="vertical">
 
                     <TextView
@@ -395,6 +400,7 @@
 
     </android.support.constraint.ConstraintLayout>
     </ScrollView>
+        </RelativeLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"

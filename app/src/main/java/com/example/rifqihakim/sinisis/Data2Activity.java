@@ -1,20 +1,18 @@
 package com.example.rifqihakim.sinisis;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.ImageButton;
 
-public class BerandaActivity extends AppCompatActivity {
-    //Mendefinisikan variabel
+public class Data2Activity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
@@ -22,30 +20,25 @@ public class BerandaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beranda);
+        setContentView(R.layout.activity_data2);
+        Button button351 = (Button) findViewById(R.id.button);
+        Button button341 = (Button) findViewById(R.id.button1);
 
-        Button Button234 = (Button) findViewById(R.id.button233);
-        Button Button233 = (Button) findViewById(R.id.button23);
-
-
-        Button234.setOnClickListener(new View.OnClickListener() {
+        button341.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), DataActivity.class);
-                startActivity(data);
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),NilaiActivity.class);
+                startActivity(il);
             }
         });
-        Button233.setOnClickListener(new View.OnClickListener() {
+        button351.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), Data2Activity.class);
-                startActivity(data);
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
+                startActivity(il);
             }
         });
 
-
-
-        // Menginisiasi Toolbar dan mensetting sebagai actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Menginisiasi  NavigationView

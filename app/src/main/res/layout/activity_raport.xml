@@ -23,7 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true">
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
 
             <TextView
                 android:id="@+id/textView9"
@@ -43,7 +44,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.135" />
+                app:layout_constraintVertical_bias="0.135"
+                tools:ignore="DuplicateIds" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -499,11 +501,11 @@
                 android:layout_marginTop="8dp"
                 android:text="NILAI RAPORT"
                 android:textColor="@android:color/holo_red_light"
-                android:textSize="24dpsp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.303"
+                app:layout_constraintHorizontal_bias="0.233"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.657" />
@@ -544,7 +546,7 @@
                 android:layout_marginTop="8dp"
                 android:text="STATUS"
                 android:textColor="@android:color/holo_red_light"
-                android:textSize="24dpsp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

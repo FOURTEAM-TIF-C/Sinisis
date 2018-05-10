@@ -33,17 +33,20 @@
 
                     <TextView
                         android:id="@+id/textView21"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="116dp"
-                        android:layout_marginStart="116dp"
-                        android:layout_marginTop="40dp"
-                        android:text="SISWA"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="32dp"
+                        android:text="SISWA KELAS 1"
                         android:textColor="@android:color/black"
                         android:textSize="30sp"
                         android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 

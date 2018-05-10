@@ -30,7 +30,8 @@
             android:layout_marginTop="80dp"
             android:text="Nilai Tugas"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="RtlCompat" />
 
 
     <EditText
@@ -41,7 +42,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="13dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:layout_marginRight="13dp"
+        android:layout_alignParentRight="true" />
 
         <TextView
             android:id="@+id/textView4"

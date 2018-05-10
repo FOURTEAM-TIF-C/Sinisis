@@ -22,7 +22,7 @@ public class DataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data);
 
         Button button34 = (Button) findViewById(R.id.button);
-        Button button35 = (Button) findViewById(R.id.button3);
+        Button button35 = (Button) findViewById(R.id.button1);
 
         button34.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -21,8 +21,8 @@ public class DataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
 
-        Button button34 = (Button) findViewById(R.id.button);
-        Button button35 = (Button) findViewById(R.id.button1);
+        Button button35 = (Button) findViewById(R.id.button);
+        Button button34 = (Button) findViewById(R.id.button1);
 
         button34.setOnClickListener(new View.OnClickListener() {
             @Override

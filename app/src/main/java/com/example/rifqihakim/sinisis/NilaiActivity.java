@@ -20,7 +20,7 @@ public class NilaiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nilai);
-        Button button356= (Button) findViewById(R.id.button211);
+        Button button356= (Button) findViewById(R.id.button7);
 
         button356.setOnClickListener(new View.OnClickListener() {
             @Override

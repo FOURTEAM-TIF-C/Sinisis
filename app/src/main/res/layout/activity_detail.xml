@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="DetailActivity">
+    tools:context=".DetailActivity">
 
   <RelativeLayout
       android:layout_width="match_parent"
@@ -334,13 +334,15 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/holo_blue_light"
-            android:text="SIMPAN"
+            android:text="OK"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.966" />
+            app:layout_constraintVertical_bias="0.984" />
 
 
     </android.support.constraint.ConstraintLayout>

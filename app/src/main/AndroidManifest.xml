@@ -23,7 +23,8 @@
         <activity android:name=".NilaiActivity" />
         <activity android:name=".RaportActivity" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".Data2Activity"></activity>
+        <activity android:name=".Data2Activity" />
+        <activity android:name=".ProfilActivity"></activity>
     </application>
 
 </manifest>

@@ -1,49 +1,24 @@
 package com.example.rifqihakim.sinisis;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
-import android.widget.ImageButton;
 
-public class BerandaActivity extends AppCompatActivity {
+public class ProfilActivity extends AppCompatActivity {
     //Mendefinisikan variabel
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beranda);
-
-        Button Button234 = (Button) findViewById(R.id.button233);
-        Button Button233 = (Button) findViewById(R.id.button23);
-
-
-        Button234.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), DataActivity.class);
-                startActivity(data);
-            }
-        });
-        Button233.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), Data2Activity.class);
-                startActivity(data);
-            }
-        });
-
-
+        setContentView(R.layout.activity_profil);
 
         // Menginisiasi Toolbar dan mensetting sebagai actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -67,8 +42,6 @@ public class BerandaActivity extends AppCompatActivity {
                     //dengan intent activity
                     case R.id.navigation1:
                         Toast.makeText(getApplicationContext(), "Pengaturan Telah Dipilih", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(BerandaActivity.this, ProfilActivity.class); //Berpindah activity
-                        startActivity(intent); //Menjalankan Activity
                         return true;
                     case R.id.navigation2:
                         Toast.makeText(getApplicationContext(),"Tentang Telah Dipilih",Toast.LENGTH_SHORT).show();
@@ -100,5 +73,6 @@ public class BerandaActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+
     }
 }

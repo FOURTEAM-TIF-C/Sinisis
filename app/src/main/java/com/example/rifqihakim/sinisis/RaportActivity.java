@@ -1,5 +1,6 @@
 package com.example.rifqihakim.sinisis;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -43,6 +44,8 @@ public class RaportActivity extends AppCompatActivity {
                     //dengan intent activity
                     case R.id.navigation1:
                         Toast.makeText(getApplicationContext(), "Pengaturan Telah Dipilih", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(RaportActivity.this, ProfilActivity.class); //Berpindah activity
+                        startActivity(intent); //Menjalankan Activity
                         return true;
                     case R.id.navigation2:
                         Toast.makeText(getApplicationContext(),"Tentang Telah Dipilih",Toast.LENGTH_SHORT).show();

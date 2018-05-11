@@ -1,20 +1,18 @@
 package com.example.rifqihakim.sinisis;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.ImageButton;
 
-public class BerandaActivity extends AppCompatActivity {
-    //Mendefinisikan variabel
+public class Data3Activity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
@@ -22,61 +20,26 @@ public class BerandaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beranda);
+        setContentView(R.layout.activity_data3);
 
-        Button Button233 = (Button) findViewById(R.id.button233);
-        Button Button23 = (Button) findViewById(R.id.button23);
-        Button Button22 = (Button) findViewById(R.id.button22);
-        Button Button21 = (Button) findViewById(R.id.button21);
-        Button Button20 = (Button) findViewById(R.id.button20);
-        Button Button26 = (Button) findViewById(R.id.button26);
+        Button button351 = (Button) findViewById(R.id.button);
+        Button button341 = (Button) findViewById(R.id.button1);
 
-        Button233.setOnClickListener(new View.OnClickListener() {
+        button341.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), DataActivity.class);
-                startActivity(data);
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),NilaiActivity.class);
+                startActivity(il);
             }
         });
-        Button23.setOnClickListener(new View.OnClickListener() {
+        button351.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), Data2Activity.class);
-                startActivity(data);
-            }
-        });
-        Button22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), Data3Activity.class);
-                startActivity(data);
-            }
-        });
-        Button21.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), Data4Activity.class);
-                startActivity(data);
-            }
-        });
-        Button20.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), Data5Activity.class);
-                startActivity(data);
-            }
-        });
-        Button26.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), Data6Activity.class);
-                startActivity(data);
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
+                startActivity(il);
             }
         });
 
-
-
-        // Menginisiasi Toolbar dan mensetting sebagai actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Menginisiasi  NavigationView
@@ -98,7 +61,7 @@ public class BerandaActivity extends AppCompatActivity {
                     //dengan intent activity
                     case R.id.navigation1:
                         Toast.makeText(getApplicationContext(), "Pengaturan Telah Dipilih", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(BerandaActivity.this, ProfilActivity.class); //Berpindah activity
+                        Intent intent = new Intent(Data3Activity.this, ProfilActivity.class); //Berpindah activity
                         startActivity(intent); //Menjalankan Activity
                         return true;
                     case R.id.navigation2:

@@ -28,7 +28,8 @@
         <activity android:name=".Data3Activity" />
         <activity android:name=".Data4Activity" />
         <activity android:name=".Data5Activity" />
-        <activity android:name=".Data6Activity"></activity>
+        <activity android:name=".Data6Activity" />
+        <activity android:name=".TentangActivity"></activity>
     </application>
 
 </manifest>

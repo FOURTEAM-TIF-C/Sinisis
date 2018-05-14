@@ -50,21 +50,40 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Terletak di Jalan Kaliurang, Sumbersari, Jember.
 Didirikan pada tanggal 20 Juni 2007. Kurikulum yang
 digunakan saat ini adalah Kurikulum 2013."
                 android:textColor="@android:color/black"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="42dp"
-                tools:layout_editor_absoluteY="323dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.809"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.637"
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="158dp"
                 android:layout_height="142dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.327"
                 app:srcCompat="@drawable/sdn"
-                tools:layout_editor_absoluteX="113dp"
-                tools:layout_editor_absoluteY="141dp"
                 tools:ignore="MissingConstraints" />
 
 

@@ -48,7 +48,7 @@
 
             <TextView
                 android:id="@+id/textView20"
-                android:layout_width="wrap_content"
+                android:layout_width="297dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
@@ -56,16 +56,14 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Terletak di Jalan Kaliurang, Sumbersari, Jember.
-Didirikan pada tanggal 20 Juni 2007. Kurikulum yang
-digunakan saat ini adalah Kurikulum 2013."
+                android:text="Terletak di Jalan Kaliurang, Sumbersari, Jember.Didirikan pada tanggal 20 Juni 2007. Kurikulum yang digunakan saat ini adalah Kurikulum 2013."
                 android:textColor="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.809"
+                app:layout_constraintHorizontal_bias="0.746"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.637"
+                app:layout_constraintVertical_bias="0.65"
                 tools:ignore="MissingConstraints" />
 
             <ImageView

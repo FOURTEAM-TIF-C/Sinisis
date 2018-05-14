@@ -97,7 +97,7 @@ public class BerandaActivity extends AppCompatActivity {
                     // pilihan menu item navigasi akan menampilkan pesan toast klik kalian bisa menggantinya
                     //dengan intent activity
                     case R.id.navigation1:
-                        Toast.makeText(getApplicationContext(), "Pengaturan Telah Dipilih", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "Pengaturan Telah Dipilih", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(BerandaActivity.this, ProfilActivity.class); //Berpindah activity
                         startActivity(intent); //Menjalankan Activity
                         return true;

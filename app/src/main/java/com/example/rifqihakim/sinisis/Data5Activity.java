@@ -66,7 +66,9 @@ public class Data5Activity extends AppCompatActivity {
                         startActivity(intent); //Menjalankan Activity
                         return true;
                     case R.id.navigation2:
-                        Toast.makeText(getApplicationContext(),"Tentang Telah Dipilih",Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(),"Tentang Telah Dipilih",Toast.LENGTH_SHORT).show();
+                        Intent tentang = new Intent(Data5Activity.this, TentangActivity.class); //Berpindah activity
+                        startActivity(tentang); //Menjalankan Activity
                         return true;
                     case R.id.navigation3:
                         Toast.makeText(getApplicationContext(),"Keluar Telah Dipilih",Toast.LENGTH_SHORT).show();

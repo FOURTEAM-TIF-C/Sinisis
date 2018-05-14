@@ -21,17 +21,23 @@ public class DataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
 
-        Button button35 = (Button) findViewById(R.id.button);
-        Button button34 = (Button) findViewById(R.id.button1);
+        Button button01 = (Button) findViewById(R.id.button);
+        Button button02 = (Button) findViewById(R.id.button1);
+        Button button11 = (Button) findViewById(R.id.button2);
+        Button button12 = (Button) findViewById(R.id.button3);
+        Button button21 = (Button) findViewById(R.id.button4);
+        Button button22 = (Button) findViewById(R.id.button5);
+        Button button31 = (Button) findViewById(R.id.button6);
+        Button button32 = (Button) findViewById(R.id.button7);
 
-        button34.setOnClickListener(new View.OnClickListener() {
+        button01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent il= new Intent(getApplicationContext(),NilaiActivity.class);
                 startActivity(il);
             }
         });
-        button35.setOnClickListener(new View.OnClickListener() {
+        button02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent il= new Intent(getApplicationContext(),RaportActivity.class);

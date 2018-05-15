@@ -17,6 +17,8 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/holo_blue_bright"
         style="?android:attr/progressBarStyle"
         android:layout_width="59dp"
         android:layout_height="65dp"

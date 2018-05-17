@@ -52,7 +52,7 @@ public class NilaiActivity extends AppCompatActivity {
                     //dengan intent activity
                     case R.id.navigation1:
                         //Toast.makeText(getApplicationContext(), "Pengaturan Telah Dipilih", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(NilaiActivity.this, ProfilActivity.class); //Berpindah activity
+                        Intent intent = new Intent(NilaiActivity.this, BerandaActivity.class); //Berpindah activity
                         startActivity(intent); //Menjalankan Activity
                         return true;
                     case R.id.navigation2:

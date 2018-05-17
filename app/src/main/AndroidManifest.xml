@@ -26,7 +26,6 @@
         <activity android:name=".RaportActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".Data2Activity" />
-        <activity android:name=".ProfilActivity" />
         <activity android:name=".Data3Activity" />
         <activity android:name=".Data4Activity" />
         <activity android:name=".Data5Activity" />

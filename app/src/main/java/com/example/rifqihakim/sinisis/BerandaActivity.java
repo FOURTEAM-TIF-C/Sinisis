@@ -13,31 +13,37 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ImageButton;
 
-public class BerandaActivity extends AppCompatActivity {
+public class BerandaActivity extends AppCompatActivity implements View.OnClickListener {
     //Mendefinisikan variabel
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+
+    private Button buttonView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda);
 
-        Button Button233 = (Button) findViewById(R.id.button233);
+        buttonView1 = (Button) findViewById(R.id.buttonView1);
+
         Button Button23 = (Button) findViewById(R.id.button23);
         Button Button22 = (Button) findViewById(R.id.button22);
         Button Button21 = (Button) findViewById(R.id.button21);
         Button Button20 = (Button) findViewById(R.id.button20);
         Button Button26 = (Button) findViewById(R.id.button26);
 
-        Button233.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent data = new Intent(getApplicationContext(), DataActivity.class);
-                startActivity(data);
-            }
-        });
+        //Setting listeners to button
+        buttonView1.setOnClickListener(this);
+
+//        buttonView1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent data = new Intent(getApplicationContext(), DataActivity.class);
+//                startActivity(data);
+//            }
+//        });
         Button23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,5 +139,10 @@ public class BerandaActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+    }
+    public void onClick(View v) {
+        if(v == buttonView1){
+            startActivity(new Intent(this,DataActivity.class));
+        }
     }
 }

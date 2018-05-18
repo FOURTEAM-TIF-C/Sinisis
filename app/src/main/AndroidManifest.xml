@@ -3,7 +3,6 @@
     package="com.example.rifqihakim.sinisis">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -30,7 +29,8 @@
         <activity android:name=".Data4Activity" />
         <activity android:name=".Data5Activity" />
         <activity android:name=".Data6Activity" />
-        <activity android:name=".TentangActivity"></activity>
+        <activity android:name=".TentangActivity" />
+        <activity android:name=".DetailDataActivity"></activity>
     </application>
 
 </manifest>

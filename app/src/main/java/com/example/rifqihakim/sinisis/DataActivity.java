@@ -43,29 +43,29 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
         listView.setOnItemClickListener(this);
         getJSON();
 
-        Button button01 = (Button) findViewById(R.id.button);
-        Button button02 = (Button) findViewById(R.id.button1);
-        Button button11 = (Button) findViewById(R.id.button2);
-        Button button12 = (Button) findViewById(R.id.button3);
-        Button button21 = (Button) findViewById(R.id.button4);
-        Button button22 = (Button) findViewById(R.id.button5);
-        Button button31 = (Button) findViewById(R.id.button6);
-        Button button32 = (Button) findViewById(R.id.button7);
-
-        button01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent il= new Intent(getApplicationContext(),NilaiActivity.class);
-                startActivity(il);
-            }
-        });
-        button02.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
-                startActivity(il);
-            }
-        });
+//        Button button01 = (Button) findViewById(R.id.button);
+//        Button button02 = (Button) findViewById(R.id.button1);
+//        Button button11 = (Button) findViewById(R.id.button2);
+//        Button button12 = (Button) findViewById(R.id.button3);
+//        Button button21 = (Button) findViewById(R.id.button4);
+//        Button button22 = (Button) findViewById(R.id.button5);
+//        Button button31 = (Button) findViewById(R.id.button6);
+//        Button button32 = (Button) findViewById(R.id.button7);
+//
+//        button01.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent il= new Intent(getApplicationContext(),NilaiActivity.class);
+//                startActivity(il);
+//            }
+//        });
+//        button02.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
+//                startActivity(il);
+//            }
+//        });
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -136,20 +136,20 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
                 JSONObject jo = result.getJSONObject(i);
                 String nis = jo.getString(konfigurasi.TAG_NIS);
                 String nama = jo.getString(konfigurasi.TAG_NAMA_SISWA);
-                String tempat = jo.getString(konfigurasi.TAG_TEMPAT_LAHIR);
-                String lahir = jo.getString(konfigurasi.TAG_TGL_LAHIR);
-                String tahun = jo.getString(konfigurasi.TAG_TAHUN_AJARAN);
-                String jenis = jo.getString(konfigurasi.TAG_JK);
-                String agama = jo.getString(konfigurasi.TAG_AGAMA);
+//                String tempat = jo.getString(konfigurasi.TAG_TEMPAT_LAHIR);
+//                String lahir = jo.getString(konfigurasi.TAG_TGL_LAHIR);
+//                String tahun = jo.getString(konfigurasi.TAG_TAHUN_AJARAN);
+//                String jenis = jo.getString(konfigurasi.TAG_JK);
+//                String agama = jo.getString(konfigurasi.TAG_AGAMA);
 
                 HashMap<String,String> employees = new HashMap<>();
                 employees.put(konfigurasi.TAG_NIS,nis);
                 employees.put(konfigurasi.TAG_NAMA_SISWA,nama);
-                employees.put(konfigurasi.TAG_TEMPAT_LAHIR,tempat);
-                employees.put(konfigurasi.TAG_TGL_LAHIR,lahir);
-                employees.put(konfigurasi.TAG_TAHUN_AJARAN,tahun);
-                employees.put(konfigurasi.TAG_JK,jenis);
-                employees.put(konfigurasi.TAG_AGAMA,agama);
+//                employees.put(konfigurasi.TAG_TEMPAT_LAHIR,tempat);
+//                employees.put(konfigurasi.TAG_TGL_LAHIR,lahir);
+//                employees.put(konfigurasi.TAG_TAHUN_AJARAN,tahun);
+//                employees.put(konfigurasi.TAG_JK,jenis);
+//                employees.put(konfigurasi.TAG_AGAMA,agama);
                 list.add(employees);
             }
 
@@ -157,13 +157,12 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
             e.printStackTrace();
         }
 
-//        ListAdapter adapter = new SimpleAdapter(
-//                // tampilSemuaPgw.this, list, R.layout.list_item,
-//                DataActivity.this, list, R.layout.list_item,
-//                new String[]{konfigurasi.TAG_NIS,konfigurasi.TAG_NAMA_SISWA,konfigurasi.TAG_TEMPAT_LAHIR,konfigurasi.TAG_TGL_LAHIR,konfigurasi.TAG_TAHUN_AJARAN,konfigurasi.TAG_JK,konfigurasi.TAG_AGAMA},
-//                new int[]{R.id.nis, R.id.nama, R.id.tempat, R.id.lahir, R.id.tahun, R.id.jenis, R.id.agama});
+        ListAdapter adapter = new SimpleAdapter(
+                DataActivity.this, list, R.layout.list_item,
+                new String[]{konfigurasi.TAG_NIS,konfigurasi.TAG_NAMA_SISWA},
+                new int[]{R.id.id, R.id.name});
 
-//        listView.setAdapter(adapter);
+        listView.setAdapter(adapter);
     }
     private void getJSON(){
         class GetJSON extends AsyncTask<Void,Void,String> {
@@ -197,7 +196,7 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
         Intent intent = new Intent(this, DetailDataActivity.class);
         HashMap<String,String> map =(HashMap)parent.getItemAtPosition(position);
         String empId = map.get(konfigurasi.TAG_NIS).toString();
-//        intent.putExtra(konfigurasi.EMP_NIS,empNis);
+        intent.putExtra(konfigurasi.EMP_NIS,empId);
         startActivity(intent);
     }
 

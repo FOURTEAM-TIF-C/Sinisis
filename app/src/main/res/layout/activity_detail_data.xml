@@ -78,7 +78,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/induk"
+                    android:id="@+id/a"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -95,7 +95,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/nama"
+                    android:id="@+id/b"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -112,7 +112,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/tempat"
+                    android:id="@+id/c"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -129,7 +129,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/tanggal"
+                    android:id="@+id/d"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -146,7 +146,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/jenis"
+                    android:id="@+id/e"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -163,7 +163,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/agama"
+                    android:id="@+id/f"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -180,7 +180,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:id="@+id/tahun"
+                    android:id="@+id/g"
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"

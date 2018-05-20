@@ -37,13 +37,13 @@ public class DetailDataActivity extends AppCompatActivity{
 
         nis = intent.getStringExtra(konfigurasi.EMP_NIS);
 
-        induk = (TextView)findViewById(R.id.induk);
-        nama = (TextView)findViewById(R.id.nama);
-        tempat = (TextView)findViewById(R.id.tempat);
-        tanggal = (TextView)findViewById(R.id.tanggal);
-        jenis = (TextView)findViewById(R.id.jenis);
-        agama = (TextView)findViewById(R.id.agama);
-        tahun = (TextView)findViewById(R.id.tahun);
+        induk = (TextView)findViewById(R.id.a);
+        nama = (TextView)findViewById(R.id.b);
+        tempat = (TextView)findViewById(R.id.c);
+        tanggal = (TextView)findViewById(R.id.d);
+        jenis = (TextView)findViewById(R.id.e);
+        agama = (TextView)findViewById(R.id.f);
+        tahun = (TextView)findViewById(R.id.g);
 
         nilai = (Button)findViewById(R.id.nilai);
         raport = (Button)findViewById(R.id.raport);
@@ -73,7 +73,7 @@ public class DetailDataActivity extends AppCompatActivity{
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(DetailDataActivity.this,"Fetching...","Wait...",false,false);
+                loading = ProgressDialog.show(DetailDataActivity.this,"Mengambil Data...","Tunggu...",false,false);
             }
 
             @Override
@@ -98,7 +98,7 @@ public class DetailDataActivity extends AppCompatActivity{
             JSONObject jsonObject = new JSONObject(json);
             JSONArray result = jsonObject.getJSONArray(konfigurasi.TAG_JSON_ARRAY);
             JSONObject c = result.getJSONObject(0);
-            String nis = c.getString(konfigurasi.TAG_NIS);
+//            String nis = c.getString(konfigurasi.TAG_NIS);
             String siswa = c.getString(konfigurasi.TAG_NAMA_SISWA);
             String lahir = c.getString(konfigurasi.TAG_TEMPAT_LAHIR);
             String tgl = c.getString(konfigurasi.TAG_TGL_LAHIR);
@@ -106,7 +106,7 @@ public class DetailDataActivity extends AppCompatActivity{
             String agm = c.getString(konfigurasi.TAG_AGAMA);
             String th = c.getString(konfigurasi.TAG_TAHUN_AJARAN);
 
-            induk.setText(nis);
+//            induk.setText(nis);
             nama.setText(siswa);
             tempat.setText(lahir);
             tanggal.setText(tgl);

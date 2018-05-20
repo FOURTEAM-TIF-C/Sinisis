@@ -15,8 +15,8 @@ public class konfigurasi {
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
     public static final String KEY_EMP_NIS = "nis";
     public static final String KEY_EMP_NAMA_SISWA = "nama";
-    public static final String KEY_EMP_TEMPAT_LAHIR = "tempat"; //desg itu variabel untuk posisi
-    public static final String KEY_EMP_TGL_LAHIR = "lahir"; //salary itu variabel untuk gajih
+    public static final String KEY_EMP_TEMPAT_LAHIR = "tempat";
+    public static final String KEY_EMP_TGL_LAHIR = "lahir";
     public static final String KEY_EMP_TAHUN_AJARAN = "tahun";
     public static final String KEY_EMP_JK = "jenis";
     public static final String KEY_EMP_AGAMA = "agama";

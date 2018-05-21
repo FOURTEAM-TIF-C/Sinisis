@@ -131,7 +131,16 @@ public class BerandaActivity extends AppCompatActivity implements View.OnClickLi
                         startActivity(tentang); //Menjalankan Activity
                         return true;
                     case R.id.navigation3:
-                        Toast.makeText(getApplicationContext(),"Keluar Telah Dipilih",Toast.LENGTH_SHORT).show();
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putBoolean(LoginActivity.session_status, false);
+                        editor.putString(TAG_ID, null);
+                        editor.putString(TAG_USERNAME, null);
+                        editor.commit();
+
+                        Intent intent = new Intent(BerandaActivity.this, LoginActivity.class);
+                        finish();
+                        startActivity(intent);
+                        Toast.makeText(getApplicationContext(),"Anda Telah Keluar",Toast.LENGTH_SHORT).show();
                         return true;
                     default:
                         Toast.makeText(getApplicationContext(),"Kesalahan Terjadi ",Toast.LENGTH_SHORT).show();

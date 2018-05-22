@@ -14,16 +14,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 public class DetailDataActivity extends AppCompatActivity{
     private String nis;
 
     private TextView induk;
-    private TextView nama;
-    private TextView tempat;
-    private TextView tanggal;
-    private TextView jenis;
-    private TextView agama;
-    private TextView tahun;
+    private TextView Tnama;
+    private TextView Ttempat;
+    private TextView Ttanggal;
+    private TextView Tjenis;
+    private TextView Tagama;
+    private TextView Ttahun;
 
     private Button nilai;
     private Button raport;
@@ -38,12 +40,12 @@ public class DetailDataActivity extends AppCompatActivity{
         nis = intent.getStringExtra(konfigurasi.EMP_NIS);
 
         induk = (TextView)findViewById(R.id.a);
-        nama = (TextView)findViewById(R.id.b);
-        tempat = (TextView)findViewById(R.id.c);
-        tanggal = (TextView)findViewById(R.id.d);
-        jenis = (TextView)findViewById(R.id.e);
-        agama = (TextView)findViewById(R.id.f);
-        tahun = (TextView)findViewById(R.id.g);
+        Tnama = (TextView)findViewById(R.id.b);
+        Ttempat = (TextView)findViewById(R.id.c);
+        Ttanggal = (TextView)findViewById(R.id.d);
+        Tjenis = (TextView)findViewById(R.id.e);
+        Tagama = (TextView)findViewById(R.id.f);
+        Ttahun = (TextView)findViewById(R.id.g);
 
         nilai = (Button)findViewById(R.id.nilai);
         raport = (Button)findViewById(R.id.raport);
@@ -107,12 +109,12 @@ public class DetailDataActivity extends AppCompatActivity{
             String th = c.getString(konfigurasi.TAG_TAHUN_AJARAN);
 
 //            induk.setText(nis);
-            nama.setText(siswa);
-            tempat.setText(lahir);
-            tanggal.setText(tgl);
-            jenis.setText(jk);
-            agama.setText(agm);
-            tahun.setText(th);
+            Tnama.setText(siswa);
+            Ttempat.setText(lahir);
+            Ttanggal.setText(tgl);
+            Tjenis.setText(jk);
+            Tagama.setText(agm);
+            Ttahun.setText(th);
 
         } catch (JSONException e) {
             e.printStackTrace();

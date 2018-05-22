@@ -160,7 +160,7 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
         ListAdapter adapter = new SimpleAdapter(
                 DataActivity.this, list, R.layout.list_item,
                 new String[]{konfigurasi.TAG_NIS,konfigurasi.TAG_NAMA_SISWA},
-                new int[]{R.id.id, R.id.name});
+                new int[]{R.id.nis, R.id.name});
 
         listView.setAdapter(adapter);
     }
@@ -195,8 +195,8 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(this, DetailDataActivity.class);
         HashMap<String,String> map =(HashMap)parent.getItemAtPosition(position);
-        String empId = map.get(konfigurasi.TAG_NIS).toString();
-        intent.putExtra(konfigurasi.EMP_NIS,empId);
+        String empNis = map.get(konfigurasi.TAG_NIS).toString();
+        intent.putExtra(konfigurasi.EMP_NIS,empNis);
         startActivity(intent);
     }
 

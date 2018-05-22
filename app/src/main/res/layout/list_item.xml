@@ -9,17 +9,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="36dp"
-        android:textColor="@android:color/black"/>
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="38dp"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/id"
-        android:layout_marginStart="141dp"
-        android:textColor="@android:color/black"/>
+        android:layout_alignTop="@+id/nis"
+        android:layout_marginStart="101dp"
+        android:textColor="@android:color/black" />
 
 </RelativeLayout>

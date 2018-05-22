@@ -7,8 +7,8 @@ public class konfigurasi {
     //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
     //public static final String URL_ADD="http://192.168.1.11/Android/pegawai/tambahPgw.php";
-    public static final String URL_GET_ALL = "http://192.168.1.11/SinisisAndroid/tampilSiswa1.php";
-    public static final String URL_GET_EMP = "http://192.168.1.11/SinisisAndroid/detailSiswa1.php?nis=";
+    public static final String URL_GET_ALL = "http://192.168.43.232/SinisisAndroid/tampilSiswa1.php";
+    public static final String URL_GET_EMP = "http://192.168.43.232/SinisisAndroid/detailSiswa1.php";
     //public static final String URL_UPDATE_EMP = "http://192.168.1.11/Android/pegawai/updatePgw.php";
     //public static final String URL_DELETE_EMP = "http://192.168.1.11/Android/pegawai/hapusPgw.php?id=";
 

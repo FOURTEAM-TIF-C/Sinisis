@@ -351,7 +351,7 @@
             tools:ignore="RtlCompat" />
 
         <Button
-            android:id="@+id/button211"
+            android:id="@+id/simpan"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/editText2"
@@ -363,7 +363,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/holo_blue_light"
-            android:text="OK"
+            android:text="SIMPAN"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -374,7 +374,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/rata"
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_marginBottom="8dp"
@@ -417,7 +417,7 @@
             tools:ignore="RtlCompat" />
 
         <TextView
-            android:id="@+id/textView161"
+            android:id="@+id/grade"
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_marginBottom="8dp"
@@ -435,22 +435,25 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.87" />
 
-        <TextView
-            android:id="@+id/rata"
+        <Button
+            android:id="@+id/hitung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="307dp"
-            tools:layout_editor_absoluteY="414dp" />
-
-        <TextView
-            android:id="@+id/grade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="307dp"
-            tools:layout_editor_absoluteY="460dp" />
-
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="bHitung"
+            android:text="Hitung"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.771"
+            tools:ignore="MissingConstraints" />
 
     </android.support.constraint.ConstraintLayout>
   </RelativeLayout>

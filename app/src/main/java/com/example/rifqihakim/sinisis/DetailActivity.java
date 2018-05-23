@@ -1,28 +1,63 @@
 package com.example.rifqihakim.sinisis;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DetailActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+
+    private EditText nPR;
+    private EditText nTugas;
+    private EditText nUH;
+    private EditText nUTS;
+    private EditText nUAS;
+
+    private TextView nAkhir;
+    private TextView nGrade;
+
+    private Button simpan;
+
+    private int PR;
+    private int Tugas;
+    private int UH;
+    private int UTS;
+    private int UAS;
+
+    private double Akhir;
+    private String Grade;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        Button button123 = (Button) findViewById(R.id.button211);
 
-        button123.setOnClickListener(new View.OnClickListener() {
+        nPR = (EditText)findViewById(R.id.pr);
+        nTugas = (EditText)findViewById(R.id.tugas);
+        nUH = (EditText)findViewById(R.id.ulangan);
+        nUTS = (EditText)findViewById(R.id.uts);
+        nUAS = (EditText)findViewById(R.id.uas);
+
+        nAkhir = (TextView)findViewById(R.id.rata);
+        nGrade = (TextView)findViewById(R.id.grade);
+        
+        simpan = (Button) findViewById(R.id.simpan);
+
+        simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent il= new Intent(getApplicationContext(),RaportActivity.class);
@@ -86,5 +121,75 @@ public class DetailActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+    }
+    private boolean validasiInput(){
+        String pesan = "" ;
+
+        if(nTugas.getText().toString().equals("")){
+            pesan += "Nilai Tugas harus diisi !\n";
+        }
+        if(nPR.getText().toString().equals("")){
+            pesan += "Nilai PR harus diisi !\n";
+        }
+        if(nUH.getText().toString().equals("")){
+            pesan += "Nilai Ulangan Harian harus diisi !\n";
+        }
+        if(nUTS.getText().toString().equals("")){
+            pesan += "Nilai UTS harus diisi !\n";
+        }
+        if(nUAS.getText().toString().equals("")){
+            pesan += "Nilai UAS harus diisi !\n";
+        }
+        if(!pesan.equals("")){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(pesan)
+                    .setPositiveButton("SIMPAN", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            AlertDialog alert = builder.create();
+            alert.show();
+            return false;
+        }else{
+            return true;
+        }
+    }
+    public  void bHitung(View view){
+        if(validasiInput()){
+            Tugas = Integer.parseInt(nTugas.getText().toString());
+            PR = Integer.parseInt(nPR.getText().toString());
+            UH = Integer.parseInt(nUH.getText().toString());
+            UTS = Integer.parseInt(nUTS.getText().toString());
+            UAS = Integer.parseInt(nUAS.getText().toString());
+
+            Akhir = kalkulasiNilaiAkhir();
+            Grade = gradeAkhir();
+
+            nAkhir.setText(String.valueOf(Akhir));
+            nGrade.setText(Grade);
+        }
+    }
+    private double kalkulasiNilaiAkhir(){
+        double pr = (double) PR;
+        double tgs = (double) Tugas;
+        double uh = (double) UH;
+        double uts = (double) UTS;
+        double uas = (double) UAS;
+
+        return (pr + tgs + uh + uts +  uas) / 5;
+    }
+    private String gradeAkhir(){
+        String _grade;
+
+        if(Akhir >= 80){
+            _grade = "A";
+        }else if(Akhir <= 79 && Akhir >= 70){
+            _grade = "B";
+        }else{
+            _grade = "C";
+        }
+        return _grade;
     }
 }

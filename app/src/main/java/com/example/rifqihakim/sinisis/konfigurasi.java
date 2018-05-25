@@ -6,16 +6,16 @@ public class konfigurasi {
     //dimana File PHP tersebut berada
     //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
-    //public static final String URL_ADD="http://192.168.1.11/Android/pegawai/tambahPgw.php";
+    public static final String URL_ADD = "http://192.168.43.232/SinisisAndroid/tambahNilai.php";
     public static final String URL_GET_ALL = "http://192.168.43.232/SinisisAndroid/tampilSiswa1.php";
     public static final String URL_GET_EMP = "http://192.168.43.232/SinisisAndroid/detailSiswa1.php";
     //public static final String URL_UPDATE_EMP = "http://192.168.1.11/Android/pegawai/updatePgw.php";
     //public static final String URL_DELETE_EMP = "http://192.168.1.11/Android/pegawai/hapusPgw.php?id=";
 
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
-//    public static final String KEY_EMP_NIS = "nis";
-//    public static final String KEY_EMP_NAMA_SISWA = "nama";
-//    public static final String KEY_EMP_TEMPAT_LAHIR = "tempat";
+    public static final String KEY_EMP_SMT = "semester";
+    public static final String KEY_EMP_RATA = "rata2";
+    public static final String KEY_EMP_GRADE = "grade";
 //    public static final String KEY_EMP_TGL_LAHIR = "lahir";
 //    public static final String KEY_EMP_TAHUN_AJARAN = "tahun";
 //    public static final String KEY_EMP_JK = "jenis";

@@ -1,7 +1,9 @@
 package com.example.rifqihakim.sinisis;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,11 +18,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DetailActivity extends AppCompatActivity {
+import java.util.HashMap;
+
+public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
 
+    private EditText Semester;
     private EditText nPR;
     private EditText nTugas;
     private EditText nUH;
@@ -54,16 +59,17 @@ public class DetailActivity extends AppCompatActivity {
 
         nAkhir = (TextView)findViewById(R.id.rata);
         nGrade = (TextView)findViewById(R.id.grade);
-        
-        simpan = (Button) findViewById(R.id.simpan);
 
-        simpan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
-                startActivity(il);
-            }
-        });
+        simpan = (Button) findViewById(R.id.simpan);
+        simpan.setOnClickListener(this);
+
+//        simpan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
+//                startActivity(il);
+//            }
+//        });
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -191,5 +197,50 @@ public class DetailActivity extends AppCompatActivity {
             _grade = "C";
         }
         return _grade;
+    }
+    //Dibawah ini merupakan perintah untuk Menambahkan nilai (CREATE)
+    private void addEmployee(){
+
+        final String smt = Semester.getText().toString().trim();
+        final String rata = nAkhir.getText().toString().trim();
+        final String grade = nGrade.getText().toString().trim();
+
+        class AddEmployee extends AsyncTask<Void,Void,String> {
+
+            ProgressDialog loading;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loading = ProgressDialog.show(DetailActivity.this,"Menambahkan...","Tunggu...",false,false);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                loading.dismiss();
+                Toast.makeText(DetailActivity.this,s,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            protected String doInBackground(Void... v) {
+                HashMap<String,String> params = new HashMap<>();
+                params.put(konfigurasi.KEY_EMP_SMT,smt);
+                params.put(konfigurasi.KEY_EMP_RATA,rata);
+                params.put(konfigurasi.KEY_EMP_GRADE,grade);
+
+                RequestHandler rh = new RequestHandler();
+                String res = rh.sendPostRequest(konfigurasi.URL_ADD, params);
+                return res;
+            }
+        }
+
+        AddEmployee ae = new AddEmployee();
+        ae.execute();
+    }
+    public void onClick(View v) {
+        if(v == simpan){
+            addEmployee();
+        }
     }
 }

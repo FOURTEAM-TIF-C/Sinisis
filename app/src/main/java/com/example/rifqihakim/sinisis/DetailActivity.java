@@ -199,13 +199,13 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         return _grade;
     }
     //Dibawah ini merupakan perintah untuk Menambahkan nilai (CREATE)
-    private void addEmployee(){
+    private void add(){
 
         final String smt = Semester.getText().toString().trim();
         final String rata = nAkhir.getText().toString().trim();
         final String grade = nGrade.getText().toString().trim();
 
-        class AddEmployee extends AsyncTask<Void,Void,String> {
+        class Add extends AsyncTask<Void,Void,String> {
 
             ProgressDialog loading;
 
@@ -235,12 +235,12 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
             }
         }
 
-        AddEmployee ae = new AddEmployee();
+        Add ae = new Add();
         ae.execute();
     }
     public void onClick(View v) {
         if(v == simpan){
-            addEmployee();
+            add();
         }
     }
 }

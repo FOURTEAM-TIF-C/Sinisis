@@ -170,31 +170,13 @@
                     android:layout_marginTop="360dp"
                     android:textColor="@android:color/black"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="400dp"
-                    android:layout_marginLeft="50dp"
-                    android:text="Tahun Ajaran"
-                    android:textColor="@android:color/black" />
-
-                <TextView
-                    android:id="@+id/g"
-                    android:layout_width="175dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="400dp"
-                    android:textColor="@android:color/black"/>
-
                 <Button
                     android:id="@+id/nilai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="56dp"
+                    android:layout_marginBottom="86dp"
                     android:layout_marginLeft="80dp"
-                    android:layout_marginTop="450dp"
                     android:background="@android:color/holo_green_light"
                     android:text="Nilai"
                     android:textColor="@android:color/black" />
@@ -203,8 +185,8 @@
                     android:id="@+id/raport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="450dp"
+                    android:layout_alignTop="@+id/nilai"
+                    android:layout_marginLeft="220dp"
                     android:background="@android:color/holo_green_light"
                     android:text="Raport"
                     android:textColor="@android:color/black" />

@@ -6,20 +6,20 @@ public class konfigurasi {
     //dimana File PHP tersebut berada
     //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
-    public static final String URL_ADD = "http://192.168.43.232/SinisisAndroid/tambahNilai.php";
-    public static final String URL_GET_ALL = "http://192.168.43.232/SinisisAndroid/tampilSiswa1.php";
-    public static final String URL_GET_EMP = "http://192.168.43.232/SinisisAndroid/detailSiswa1.php";
-    //public static final String URL_UPDATE_EMP = "http://192.168.1.11/Android/pegawai/updatePgw.php";
-    //public static final String URL_DELETE_EMP = "http://192.168.1.11/Android/pegawai/hapusPgw.php?id=";
+    public static final String URL_ADD = "http://192.168.1.11/SinisisAndroid/tambahNilai.php";
+    public static final String URL_GET_ALL = "http://192.168.1.11/SinisisAndroid/tampilSiswa1.php";
+    public static final String URL_GET_ALL2 = "http://192.168.1.11/SinisisAndroid/tampilSiswa2.php";
+    public static final String URL_GET_ALL3 = "http://192.168.1.11/SinisisAndroid/tampilSiswa3.php";
+    public static final String URL_GET_ALL4 = "http://192.168.1.11/SinisisAndroid/tampilSiswa4.php";
+    public static final String URL_GET_ALL5 = "http://192.168.1.11/SinisisAndroid/tampilSiswa5.php";
+    public static final String URL_GET_ALL6 = "http://192.168.1.11/SinisisAndroid/tampilSiswa6.php";
+    public static final String URL_GET_EMP = "http://192.168.1.11/SinisisAndroid/detailSiswa1.php";
+
 
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
     public static final String KEY_EMP_SMT = "semester";
-    public static final String KEY_EMP_RATA = "rata2";
+    public static final String KEY_EMP_RATA = "nilaiRata";
     public static final String KEY_EMP_GRADE = "grade";
-//    public static final String KEY_EMP_TGL_LAHIR = "lahir";
-//    public static final String KEY_EMP_TAHUN_AJARAN = "tahun";
-//    public static final String KEY_EMP_JK = "jenis";
-//    public static final String KEY_EMP_AGAMA = "agama";
 
     //JSON Tags
     public static final String TAG_JSON_ARRAY="result";
@@ -31,7 +31,6 @@ public class konfigurasi {
     public static final String TAG_JK = "jenis";
     public static final String TAG_AGAMA = "agama";
 
-    //ID karyawan
-    //emp itu singkatan dari Employee
+    //ID siswa
     public static final String EMP_NIS = "emp_nis";
 }

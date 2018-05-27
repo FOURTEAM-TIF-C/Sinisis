@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,14 +46,14 @@ public class DetailDataActivity extends AppCompatActivity{
     private TextView Ttanggal;
     private TextView Tjenis;
     private TextView Tagama;
-    private TextView Ttahun;
 
+    private ImageButton kembali;
     private Button nilai;
     private Button raport;
     public static final String json_obj_req ="json_obj_req";
-    public static final String URL_GET_EMP = "http://192.168.43.232/SinisisAndroid/detailSiswa1.php";
-    public static final String TAG_NIS = "nis";
-    public static final String TAG_NAMA_SISWA = "nama";
+//    public static final String URL_GET_EMP = "http://192.168.43.232/SinisisAndroid/detailSiswa1.php";
+//    public static final String TAG_NIS = "nis";
+//    public static final String TAG_NAMA_SISWA = "nama";
 
 
     @Override
@@ -70,21 +71,28 @@ public class DetailDataActivity extends AppCompatActivity{
         Ttanggal = (TextView)findViewById(R.id.d);
         Tjenis = (TextView)findViewById(R.id.e);
         Tagama = (TextView)findViewById(R.id.f);
-        Ttahun = (TextView)findViewById(R.id.g);
 
         induk.setText(nis);
 
         Volley();
 
+        kembali = (ImageButton)findViewById(R.id.back);
         nilai = (Button)findViewById(R.id.nilai);
         raport = (Button)findViewById(R.id.raport);
+
+        kembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent back= new Intent(getApplicationContext(),DataActivity.class);
+                startActivity(back);
+            }
+        });
 
         nilai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent nil= new Intent(getApplicationContext(),NilaiActivity.class);
-//                startActivity(nil);
-                Volley();
+                Intent nil= new Intent(getApplicationContext(),NilaiActivity.class);
+                startActivity(nil);
             }
         });
         raport.setOnClickListener(new View.OnClickListener() {
@@ -94,9 +102,6 @@ public class DetailDataActivity extends AppCompatActivity{
                 startActivity(ra);
             }
         });
-
-
-//        getEmployee();
     }
     private void Volley(){
         final String nama1 = induk.getText().toString().trim();
@@ -110,14 +115,7 @@ public class DetailDataActivity extends AppCompatActivity{
                     Ttanggal.setText(jsonObject.getString(TAG_TGL_LAHIR));
                     Tjenis.setText(jsonObject.getString(TAG_JK));
                     Tagama.setText(jsonObject.getString(TAG_AGAMA));
-                    Ttahun.setText(jsonObject.getString(TAG_TAHUN_AJARAN));
 
-                    ////            Ttempat.setText(lahir);
-                    ////            Ttanggal.setText(tgl);
-                    ////            Tjenis.setText(jk);
-                    ////            Tagama.setText(agm);
-                    ////            Ttahun.setText(th);
-                    ////
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

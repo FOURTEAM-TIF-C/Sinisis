@@ -43,32 +43,9 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
         listView.setOnItemClickListener(this);
         getJSON();
 
-//        Button button01 = (Button) findViewById(R.id.button);
-//        Button button02 = (Button) findViewById(R.id.button1);
-//        Button button11 = (Button) findViewById(R.id.button2);
-//        Button button12 = (Button) findViewById(R.id.button3);
-//        Button button21 = (Button) findViewById(R.id.button4);
-//        Button button22 = (Button) findViewById(R.id.button5);
-//        Button button31 = (Button) findViewById(R.id.button6);
-//        Button button32 = (Button) findViewById(R.id.button7);
-//
-//        button01.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent il= new Intent(getApplicationContext(),NilaiActivity.class);
-//                startActivity(il);
-//            }
-//        });
-//        button02.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
-//                startActivity(il);
-//            }
-//        });
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         // Menginisiasi  NavigationView
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         //Mengatur Navigasi View Item yang akan dipanggil untuk menangani item klik menu navigasi
@@ -125,7 +102,7 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
         actionBarDrawerToggle.syncState();
 
     }
-    private void showEmployee(){
+    private void show(){
         JSONObject jsonObject = null;
         ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String, String>>();
         try {
@@ -136,20 +113,10 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
                 JSONObject jo = result.getJSONObject(i);
                 String nis = jo.getString(konfigurasi.TAG_NIS);
                 String nama = jo.getString(konfigurasi.TAG_NAMA_SISWA);
-//                String tempat = jo.getString(konfigurasi.TAG_TEMPAT_LAHIR);
-//                String lahir = jo.getString(konfigurasi.TAG_TGL_LAHIR);
-//                String tahun = jo.getString(konfigurasi.TAG_TAHUN_AJARAN);
-//                String jenis = jo.getString(konfigurasi.TAG_JK);
-//                String agama = jo.getString(konfigurasi.TAG_AGAMA);
 
                 HashMap<String,String> employees = new HashMap<>();
                 employees.put(konfigurasi.TAG_NIS,nis);
                 employees.put(konfigurasi.TAG_NAMA_SISWA,nama);
-//                employees.put(konfigurasi.TAG_TEMPAT_LAHIR,tempat);
-//                employees.put(konfigurasi.TAG_TGL_LAHIR,lahir);
-//                employees.put(konfigurasi.TAG_TAHUN_AJARAN,tahun);
-//                employees.put(konfigurasi.TAG_JK,jenis);
-//                employees.put(konfigurasi.TAG_AGAMA,agama);
                 list.add(employees);
             }
 
@@ -179,7 +146,7 @@ public class DataActivity extends AppCompatActivity implements ListView.OnItemCl
                 super.onPostExecute(s);
                 loading.dismiss();
                 JSON_STRING = s;
-                showEmployee();
+                show();
             }
 
             @Override

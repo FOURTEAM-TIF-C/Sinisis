@@ -1,6 +1,8 @@
 package com.example.rifqihakim.sinisis;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -9,36 +11,36 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
-public class Data6Activity extends AppCompatActivity {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Data6Activity extends AppCompatActivity implements ListView.OnItemClickListener{
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+
+    private ListView listView;
+    private String JSON_STRING;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data6);
 
-        Button button351 = (Button) findViewById(R.id.button);
-        Button button341 = (Button) findViewById(R.id.button1);
-
-        button341.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent il= new Intent(getApplicationContext(),NilaiActivity.class);
-                startActivity(il);
-            }
-        });
-        button351.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent il= new Intent(getApplicationContext(),RaportActivity.class);
-                startActivity(il);
-            }
-        });
+        listView = (ListView) findViewById(R.id.listView);
+        listView.setOnItemClickListener(this);
+        getJSON();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -96,5 +98,69 @@ public class Data6Activity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+    }
+    private void show(){
+        JSONObject jsonObject = null;
+        ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String, String>>();
+        try {
+            jsonObject = new JSONObject(JSON_STRING);
+            JSONArray result = jsonObject.getJSONArray(konfigurasi.TAG_JSON_ARRAY);
+
+            for(int i = 0; i<result.length(); i++){
+                JSONObject jo = result.getJSONObject(i);
+                String nis = jo.getString(konfigurasi.TAG_NIS);
+                String nama = jo.getString(konfigurasi.TAG_NAMA_SISWA);
+
+                HashMap<String,String> employees = new HashMap<>();
+                employees.put(konfigurasi.TAG_NIS,nis);
+                employees.put(konfigurasi.TAG_NAMA_SISWA,nama);
+                list.add(employees);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        ListAdapter adapter = new SimpleAdapter(
+                Data6Activity.this, list, R.layout.list_item,
+                new String[]{konfigurasi.TAG_NIS,konfigurasi.TAG_NAMA_SISWA},
+                new int[]{R.id.nis, R.id.name});
+
+        listView.setAdapter(adapter);
+    }
+    private void getJSON(){
+        class GetJSON extends AsyncTask<Void,Void,String> {
+
+            ProgressDialog loading;
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loading = ProgressDialog.show(Data6Activity.this,"Mengambil Data","Mohon Tunggu...",false,false);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                loading.dismiss();
+                JSON_STRING = s;
+                show();
+            }
+
+            @Override
+            protected String doInBackground(Void... params) {
+                RequestHandler rh = new RequestHandler();
+                String s = rh.sendGetRequest(konfigurasi.URL_GET_ALL6);
+                return s;
+            }
+        }
+        GetJSON gj = new GetJSON();
+        gj.execute();
+    }
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(this, DetailDataActivity.class);
+        HashMap<String,String> map =(HashMap)parent.getItemAtPosition(position);
+        String empNis = map.get(konfigurasi.TAG_NIS).toString();
+        intent.putExtra(konfigurasi.EMP_NIS,empNis);
+        startActivity(intent);
     }
 }

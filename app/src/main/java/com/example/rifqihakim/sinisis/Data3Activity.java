@@ -42,7 +42,6 @@ public class Data3Activity extends AppCompatActivity implements ListView.OnItemC
         listView.setOnItemClickListener(this);
         getJSON();
 
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Menginisiasi  NavigationView

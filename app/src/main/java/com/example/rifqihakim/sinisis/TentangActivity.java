@@ -9,20 +9,32 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 public class TentangActivity extends AppCompatActivity {
-    //Mendefinisikan variabel
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+
+    ViewFlipper flipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tentang);
 
-        // Menginisiasi Toolbar dan mensetting sebagai actionbar
+        int images[]={R.drawable.sdn, R.drawable.sd, R.drawable.sd2, R.drawable.sd3};
+
+        flipper = findViewById(R.id.flipper);
+
+//        for(int i=0; i<images.length; i++){
+//            flipperImages(i);
+//        }
+        for(int image : images){
+            flipperImages(image);
+        }
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Menginisiasi  NavigationView
@@ -77,5 +89,17 @@ public class TentangActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+    }
+    public void flipperImages(int image){
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        flipper.addView(imageView);
+        flipper.setFlipInterval(3000); //3 detik
+        flipper.setAutoStart(true);
+
+        //animasi
+        flipper.setInAnimation(this, android.R.anim.slide_in_left);
+        flipper.setOutAnimation(this, android.R.anim.slide_out_right);
     }
 }

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class RaportActivity extends AppCompatActivity {
@@ -17,10 +18,34 @@ public class RaportActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
 
+    private TextView mtk;
+    private TextView bindo;
+    private TextView agama;
+    private TextView big;
+    private TextView bd;
+    private TextView ips;
+    private TextView pkn;
+    private TextView seni;
+    private TextView ipa;
+    private TextView penjas;
+
+    private int nMTK;
+    private int nBI;
+    private int nAgama;
+    private int nBIG;
+    private int nBD;
+    private int nIPS;
+    private int nPKN;
+    private int nSeni;
+    private int nIPA;
+    private int nPenjas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raport);
+
+        mtk = (TextView)findViewById(R.id.mtk);
 
         // Menginisiasi Toolbar dan mensetting sebagai actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);

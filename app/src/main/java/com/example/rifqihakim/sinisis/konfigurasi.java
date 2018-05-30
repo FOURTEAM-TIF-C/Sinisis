@@ -6,14 +6,14 @@ public class konfigurasi {
     //dimana File PHP tersebut berada
     //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
-    public static final String URL_ADD = "http://192.168.1.11/SinisisAndroid/tambahNilai.php";
-    public static final String URL_GET_ALL = "http://192.168.1.11/SinisisAndroid/tampilSiswa1.php";
-    public static final String URL_GET_ALL2 = "http://192.168.1.11/SinisisAndroid/tampilSiswa2.php";
-    public static final String URL_GET_ALL3 = "http://192.168.1.11/SinisisAndroid/tampilSiswa3.php";
-    public static final String URL_GET_ALL4 = "http://192.168.1.11/SinisisAndroid/tampilSiswa4.php";
-    public static final String URL_GET_ALL5 = "http://192.168.1.11/SinisisAndroid/tampilSiswa5.php";
-    public static final String URL_GET_ALL6 = "http://192.168.1.11/SinisisAndroid/tampilSiswa6.php";
-    public static final String URL_GET_EMP = "http://192.168.1.11/SinisisAndroid/detailSiswa1.php";
+    public static final String URL_ADD = "http://sinisis.tk/android/data/tambahNilai.php";
+    public static final String URL_GET_ALL = "http://sinisis.tk/android/data/tampilSiswa1.php";
+    public static final String URL_GET_ALL2 = "http://sinisis.tk/android/data/tampilSiswa2.php";
+    public static final String URL_GET_ALL3 = "http://sinisis.tk/android/data/tampilSiswa3.php";
+    public static final String URL_GET_ALL4 = "http://sinisis.tk/android/data/tampilSiswa4.php";
+    public static final String URL_GET_ALL5 = "http://sinisis.tk/android/data/tampilSiswa5.php";
+    public static final String URL_GET_ALL6 = "http://sinisis.tk/android/data/tampilSiswa6.php";
+    public static final String URL_GET_EMP = "http://sinisis.tk/android/data/detailSiswa1.php";
 
 
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP

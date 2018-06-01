@@ -7,10 +7,36 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.example.rifqihakim.sinisis.app.AppController;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_AGAMA;
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_JK;
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_NAMA_SISWA;
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_NILAI;
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_NIS;
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_RAPORT;
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_TEMPAT_LAHIR;
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_TGL_LAHIR;
+import static com.example.rifqihakim.sinisis.konfigurasi.URL_GET_EMP;
+import static com.example.rifqihakim.sinisis.konfigurasi.URL_GET_RAPORT;
 
 public class RaportActivity extends AppCompatActivity {
     //Mendefinisikan variabel
@@ -18,8 +44,11 @@ public class RaportActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
 
-    private TextView mtk;
-    private TextView bindo;
+    private EditText mtk;
+    private EditText bindo;
+
+//    private TextView mtk;
+//    private TextView bindo;
     private TextView agama;
     private TextView big;
     private TextView bd;
@@ -28,6 +57,11 @@ public class RaportActivity extends AppCompatActivity {
     private TextView seni;
     private TextView ipa;
     private TextView penjas;
+
+    private TextView raport;
+    private EditText status;
+
+    private Button hitung;
 
     private int nMTK;
     private int nBI;
@@ -40,12 +74,36 @@ public class RaportActivity extends AppCompatActivity {
     private int nIPA;
     private int nPenjas;
 
+    private double nRaport;
+    private String nStatus;
+
+    public static final String json_obj_req ="json_obj_req";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raport);
 
-        mtk = (TextView)findViewById(R.id.mtk);
+        mtk = (EditText) findViewById(R.id.mtk);
+        bindo = (EditText) findViewById(R.id.bindo);
+
+//        mtk = (TextView)findViewById(R.id.mtk);
+//        bindo = (TextView)findViewById(R.id.bindo);
+        agama = (TextView)findViewById(R.id.agama);
+        big = (TextView)findViewById(R.id.big);
+        bd = (TextView)findViewById(R.id.bd);
+        ips = (TextView)findViewById(R.id.ips);
+        pkn = (TextView)findViewById(R.id.pkn);
+        seni = (TextView)findViewById(R.id.seni);
+        ipa = (TextView)findViewById(R.id.ipa);
+        penjas = (TextView)findViewById(R.id.penjas);
+
+      //Volley(raport1);
+
+        hitung = (Button)findViewById(R.id.hitung);
+
+        raport = (TextView)findViewById(R.id.raport);
+        status = (EditText)findViewById(R.id.status);
 
         // Menginisiasi Toolbar dan mensetting sebagai actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -104,5 +162,83 @@ public class RaportActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+    }
+    public void bHitung(View view){
+        nMTK = Integer.parseInt(mtk.getText().toString());
+        nBI= Integer.parseInt(bindo.getText().toString());
+        nAgama = Integer.parseInt(agama.getText().toString());
+        nBIG = Integer.parseInt(big.getText().toString());
+        nBD = Integer.parseInt(bd.getText().toString());
+        nIPS = Integer.parseInt(ips.getText().toString());
+        nPKN = Integer.parseInt(pkn.getText().toString());
+        nSeni = Integer.parseInt(seni.getText().toString());
+        nIPA = Integer.parseInt(ipa.getText().toString());
+        nPenjas = Integer.parseInt(penjas.getText().toString());
+
+        nRaport = hitungNilai();
+        nStatus = statusAkhir();
+
+        raport.setText(String.valueOf(nRaport));
+        status.setText(nStatus);
+    }
+    private double hitungNilai(){
+        double mat = (double) nMTK;
+        double bin = (double) nBI;
+        double agma = (double) nAgama;
+        double bg = (double) nBIG;
+        double bdaer = (double) nBD;
+        double sos = (double) nIPS;
+        double kn = (double) nPKN;
+        double sni = (double) nSeni;
+        double alam = (double) nIPA;
+        double pjk = (double) nPenjas;
+
+        return (mat + bin + agma + bg +  bdaer + sos + kn + sni + alam + pjk) / 10;
+    }
+    private String statusAkhir(){
+        String sts;
+
+        if(nRaport >= 60){
+            sts = "NAIK";
+        }else{
+            sts = "TIDAK NAIK";
+        }
+        return sts;
+    }
+    private void Volley(final String raport1){
+        StringRequest strReq = new StringRequest(Request.Method.POST, URL_GET_RAPORT, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    mtk.setText(jsonObject.getString(TAG_NILAI));
+                    bindo.setText(jsonObject.getString(TAG_NILAI));
+//                    agama.setText(jsonObject.getString(TAG_TGL_LAHIR));
+//                    big.setText(jsonObject.getString(TAG_JK));
+//                    ips.setText(jsonObject.getString(TAG_AGAMA));
+//                    pkn.setText(jsonObject.getString(TAG_AGAMA));
+//                    seni.setText(jsonObject.getString(TAG_AGAMA));
+//                    ipa.setText(jsonObject.getString(TAG_AGAMA));
+//                    penjas.setText(jsonObject.getString(TAG_AGAMA));
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e(DetailDataActivity.class.getSimpleName(), "Error :"+ error.getMessage());
+                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String,String> params = new HashMap<String, String>();
+                params.put(TAG_RAPORT, raport1);
+                return params;
+            }
+        };
+        AppController.getInstance().addToRequestQueue(strReq, json_obj_req);
     }
 }

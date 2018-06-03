@@ -13,14 +13,14 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BerandaActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".BerandaActivity" />
         <activity android:name=".SplashActivity" />
         <activity android:name=".DataActivity" />
         <activity android:name=".NilaiActivity" />
@@ -32,7 +32,8 @@
         <activity android:name=".Data5Activity" />
         <activity android:name=".Data6Activity" />
         <activity android:name=".TentangActivity" />
-        <activity android:name=".DetailDataActivity"></activity>
+        <activity android:name=".DetailDataActivity" />
+        <activity android:name=".InputRaport"></activity>
     </application>
 
 </manifest>

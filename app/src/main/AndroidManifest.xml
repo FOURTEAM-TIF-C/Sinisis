@@ -13,24 +13,16 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".LoginActivity">
-=======
+
         <activity android:name=".SplashActivity">
->>>>>>> 3c5d263f7c309c6e2dc72b3a6d0b2cae22823afc
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".BerandaActivity" />
-        <activity android:name=".SplashActivity" />
-=======
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".BerandaActivity" />
->>>>>>> 3c5d263f7c309c6e2dc72b3a6d0b2cae22823afc
+        <activity android:name=".LoginActivity"/>
         <activity android:name=".DataActivity" />
         <activity android:name=".NilaiActivity" />
         <activity android:name=".RaportActivity" />

@@ -66,7 +66,9 @@
 
             <RelativeLayout
                 android:layout_width="350dp"
-                android:layout_height="550dp">
+                android:layout_height="550dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -83,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
                     android:layout_marginTop="160dp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -100,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
                     android:layout_marginTop="200dp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -117,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
                     android:layout_marginTop="240dp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -134,14 +136,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
                     android:layout_marginTop="280dp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="320dp"
                     android:layout_marginLeft="50dp"
+                    android:layout_marginTop="320dp"
                     android:text="Jenis Kelamin"
                     android:textColor="@android:color/black" />
 
@@ -151,14 +153,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
                     android:layout_marginTop="320dp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="360dp"
                     android:layout_marginLeft="50dp"
+                    android:layout_marginTop="360dp"
                     android:text="Agama"
                     android:textColor="@android:color/black" />
 
@@ -168,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
                     android:layout_marginTop="360dp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/black" />
 
                 <Button
                     android:id="@+id/nilai"
@@ -196,11 +198,11 @@
                     android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:layout_alignParentTop="true"
-                    app:srcCompat="@drawable/back"
-                    tools:ignore="VectorDrawableCompat"
-                    android:background="@android:color/transparent"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/back"
+                    tools:ignore="VectorDrawableCompat" />
 
             </RelativeLayout>
         </RelativeLayout>

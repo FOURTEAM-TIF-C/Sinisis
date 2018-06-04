@@ -16,11 +16,9 @@ public class InputRaport extends AppCompatActivity implements View.OnClickListen
 
     //Dibawah ini merupakan perintah untuk mendefinikan View
     private EditText txt_idRaport;
-    private EditText editTextDesg;
-    private EditText editTextSal;
+
 
     private Button buttonAdd;
-    private Button buttonView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +36,7 @@ public class InputRaport extends AppCompatActivity implements View.OnClickListen
     }
 
 
-    //Dibawah ini merupakan perintah untuk Menambahkan Pegawai (CREATE)
+    //Dibawah ini merupakan perintah untuk Menambahkan  (CREATE)
     private void addEmployee(){
 
         final String idr = txt_idRaport.getText().toString().trim();
@@ -79,6 +77,8 @@ public class InputRaport extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         if(v == buttonAdd){
             addEmployee();
+            Intent il= new Intent(getApplicationContext(),NilaiActivity.class);
+            startActivity(il);
         }
 
     }

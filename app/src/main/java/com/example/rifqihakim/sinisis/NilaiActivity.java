@@ -21,16 +21,89 @@ public class NilaiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nilai);
-        Button button356= (Button) findViewById(R.id.button7);
+        Button button1= (Button) findViewById(R.id.button7);
+        Button button2= (Button) findViewById(R.id.button);
+        Button button3= (Button) findViewById(R.id.button2);
+        Button button4= (Button) findViewById(R.id.button11);
+        Button button5= (Button) findViewById(R.id.button12);
+        Button button6= (Button) findViewById(R.id.button13);
+        Button button7= (Button) findViewById(R.id.button14);
+        Button button8= (Button) findViewById(R.id.button15);
+        Button button9= (Button) findViewById(R.id.button16);
+        Button button10= (Button) findViewById(R.id.btn_raport);
 
 
-        button356.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent il= new Intent(getApplicationContext(),DetailActivity.class);
                 startActivity(il);
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),InputRaport.class);
+                startActivity(il);
+            }
+        });
+
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -91,4 +164,7 @@ public class NilaiActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
     }
+
+
 }
+

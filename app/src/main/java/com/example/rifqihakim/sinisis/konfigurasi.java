@@ -2,11 +2,9 @@ package com.example.rifqihakim.sinisis;
 
 public class konfigurasi {
     //Dibawah ini merupakan Pengalamatan dimana Lokasi Skrip CRUD PHP disimpan
-    //karena kita membuat localhost maka alamatnya tertuju ke IP komputer
-    //dimana File PHP tersebut berada
-    //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
 
     public static final String URL_ADD = "http://sinisis.tk/android/data/tambahNilai.php";
+    public static final String URL_ADD_ID = "http://sinisis.tk/android/data/tambahID.php";
     public static final String URL_GET_ALL = "http://sinisis.tk/android/data/tampilSiswa1.php";
     public static final String URL_GET_ALL2 = "http://sinisis.tk/android/data/tampilSiswa2.php";
     public static final String URL_GET_ALL3 = "http://sinisis.tk/android/data/tampilSiswa3.php";
@@ -19,6 +17,7 @@ public class konfigurasi {
 
 
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
+    public static final String KEY_EMP_IDR = "id_raport";
     public static final String KEY_EMP_SMT = "semester";
     public static final String KEY_EMP_RATA = "nilaiRata";
     public static final String KEY_EMP_GRADE = "grade";

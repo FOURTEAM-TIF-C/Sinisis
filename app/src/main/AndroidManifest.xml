@@ -13,15 +13,24 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
+        <activity android:name=".LoginActivity">
+=======
         <activity android:name=".SplashActivity">
+>>>>>>> 3c5d263f7c309c6e2dc72b3a6d0b2cae22823afc
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+        <activity android:name=".BerandaActivity" />
+        <activity android:name=".SplashActivity" />
+=======
         <activity android:name=".LoginActivity" />
         <activity android:name=".BerandaActivity" />
+>>>>>>> 3c5d263f7c309c6e2dc72b3a6d0b2cae22823afc
         <activity android:name=".DataActivity" />
         <activity android:name=".NilaiActivity" />
         <activity android:name=".RaportActivity" />
@@ -33,6 +42,7 @@
         <activity android:name=".Data6Activity" />
         <activity android:name=".TentangActivity" />
         <activity android:name=".DetailDataActivity" />
+<<<<<<< HEAD
         <activity android:name=".Raport2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,6 +50,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+=======
+        <activity android:name=".InputRaport"></activity>
+>>>>>>> 8e7ee23a1e4a23e92392bced74593b78ca022431
     </application>
 
 </manifest>

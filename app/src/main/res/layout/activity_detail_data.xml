@@ -178,7 +178,7 @@
                     android:text="Raport 1"
                     android:textColor="@android:color/black" />
 
-<<<<<<< HEAD
+
                 <ImageButton
                     android:id="@+id/back"
                     android:layout_width="50dp"
@@ -189,7 +189,7 @@
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/back"
                     tools:ignore="VectorDrawableCompat" />
-=======
+
                 <Button
                     android:id="@+id/raport2"
                     android:layout_width="wrap_content"
@@ -202,7 +202,7 @@
                     android:background="@android:color/holo_green_light"
                     android:text="Raport 2"
                     android:textColor="@android:color/black" />
->>>>>>> e1f9f56149a58df2146433611849af8aabaf02ea
+
 
             </RelativeLayout>
         </RelativeLayout>

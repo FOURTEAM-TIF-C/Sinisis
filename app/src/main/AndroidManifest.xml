@@ -34,7 +34,17 @@
         <activity android:name=".Data6Activity" />
         <activity android:name=".TentangActivity" />
         <activity android:name=".DetailDataActivity" />
+<<<<<<< HEAD
+        <activity android:name=".Raport2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+=======
         <activity android:name=".InputRaport"></activity>
+>>>>>>> 8e7ee23a1e4a23e92392bced74593b78ca022431
     </application>
 
 </manifest>

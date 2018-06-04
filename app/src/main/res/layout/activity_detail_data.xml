@@ -47,23 +47,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView21"
-                android:layout_centerHorizontal="true"
-                android:text="Kelas 1"
-                android:textColor="@android:color/holo_red_light"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.129" />
-
             <RelativeLayout
                 android:layout_width="350dp"
                 android:layout_height="550dp"
@@ -174,12 +157,13 @@
 
                 <Button
                     android:id="@+id/nilai"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="86dp"
-                    android:layout_marginLeft="80dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginLeft="100dp"
                     android:background="@android:color/holo_green_light"
+                    android:textSize="20sp"
                     android:text="Nilai"
                     android:textColor="@android:color/black" />
 
@@ -187,12 +171,14 @@
                     android:id="@+id/raport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/nilai"
-                    android:layout_marginLeft="220dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/raport2"
+                    android:layout_marginBottom="90dp"
                     android:background="@android:color/holo_green_light"
-                    android:text="Raport"
+                    android:text="Raport 1"
                     android:textColor="@android:color/black" />
 
+<<<<<<< HEAD
                 <ImageButton
                     android:id="@+id/back"
                     android:layout_width="50dp"
@@ -203,6 +189,20 @@
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/back"
                     tools:ignore="VectorDrawableCompat" />
+=======
+                <Button
+                    android:id="@+id/raport2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="Raport 2"
+                    android:textColor="@android:color/black" />
+>>>>>>> e1f9f56149a58df2146433611849af8aabaf02ea
 
             </RelativeLayout>
         </RelativeLayout>

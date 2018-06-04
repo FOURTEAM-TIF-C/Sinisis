@@ -32,7 +32,14 @@
         <activity android:name=".Data5Activity" />
         <activity android:name=".Data6Activity" />
         <activity android:name=".TentangActivity" />
-        <activity android:name=".DetailDataActivity"></activity>
+        <activity android:name=".DetailDataActivity" />
+        <activity android:name=".Raport2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ public class konfigurasi {
     public static final String URL_GET_ALL6 = "http://sinisis.tk/android/data/tampilSiswa6.php";
     public static final String URL_GET_EMP = "http://sinisis.tk/android/data/detailSiswa1.php";
     public static final String URL_GET_RAPORT = "http://sinisis.tk/android/data/raport.php";
+    public static final String URL_GET_RAPORT2 = "http://sinisis.tk/android/data/raport2.php";
 
 
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
@@ -33,6 +34,7 @@ public class konfigurasi {
     public static final String TAG_AGAMA = "agama";
 
     public static final String TAG_RAPORT = "raport";
+    public static final String TAG_MAPEL = "mapel";
     public static final String TAG_NILAI = "nilai";
 
 //    public static final String TAG_BI = "agama";

@@ -28,10 +28,12 @@ import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.example.rifqihakim.sinisis.konfigurasi.EMP_NIS;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_AGAMA;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_JK;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_NAMA_SISWA;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_NIS;
+import static com.example.rifqihakim.sinisis.konfigurasi.TAG_RAPORT;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_TAHUN_AJARAN;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_TEMPAT_LAHIR;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_TGL_LAHIR;
@@ -47,9 +49,10 @@ public class DetailDataActivity extends AppCompatActivity{
     private TextView Tjenis;
     private TextView Tagama;
 
-    private ImageButton kembali;
     private Button nilai;
     private Button raport;
+    private Button raport2;
+
     public static final String json_obj_req ="json_obj_req";
 //    public static final String URL_GET_EMP = "http://192.168.43.232/SinisisAndroid/detailSiswa1.php";
 //    public static final String TAG_NIS = "nis";
@@ -76,17 +79,9 @@ public class DetailDataActivity extends AppCompatActivity{
 
         Volley();
 
-        kembali = (ImageButton)findViewById(R.id.back);
         nilai = (Button)findViewById(R.id.nilai);
         raport = (Button)findViewById(R.id.raport);
-
-        kembali.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent back= new Intent(getApplicationContext(),DataActivity.class);
-                startActivity(back);
-            }
-        });
+        raport2 = (Button)findViewById(R.id.raport2);
 
         nilai.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,6 +94,15 @@ public class DetailDataActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent ra= new Intent(getApplicationContext(),RaportActivity.class);
+                ra.putExtra(EMP_NIS, nis);
+                startActivity(ra);
+            }
+        });
+        raport2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ra= new Intent(getApplicationContext(),Raport2Activity.class);
+                ra.putExtra(EMP_NIS, nis);
                 startActivity(ra);
             }
         });

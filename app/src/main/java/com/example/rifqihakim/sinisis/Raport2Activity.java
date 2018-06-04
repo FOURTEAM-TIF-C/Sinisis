@@ -36,8 +36,9 @@ import java.util.Map;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_JSON_ARRAY;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_NIS;
 import static com.example.rifqihakim.sinisis.konfigurasi.URL_GET_RAPORT;
+import static com.example.rifqihakim.sinisis.konfigurasi.URL_GET_RAPORT2;
 
-public class RaportActivity extends AppCompatActivity {
+public class Raport2Activity extends AppCompatActivity {
     //Mendefinisikan variabel
     private Toolbar toolbar;
     private NavigationView navigationView;
@@ -96,7 +97,7 @@ public class RaportActivity extends AppCompatActivity {
 
         nis = getIntent().getStringExtra(konfigurasi.EMP_NIS);
 
-     Volley();
+        Volley();
 
         hitung = (Button)findViewById(R.id.hitung);
 
@@ -125,12 +126,12 @@ public class RaportActivity extends AppCompatActivity {
                     //dengan intent activity
                     case R.id.navigation1:
                         //Toast.makeText(getApplicationContext(), "Pengaturan Telah Dipilih", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RaportActivity.this, BerandaActivity.class); //Berpindah activity
+                        Intent intent = new Intent(Raport2Activity.this, BerandaActivity.class); //Berpindah activity
                         startActivity(intent); //Menjalankan Activity
                         return true;
                     case R.id.navigation2:
                         //Toast.makeText(getApplicationContext(),"Tentang Telah Dipilih",Toast.LENGTH_SHORT).show();
-                        Intent tentang = new Intent(RaportActivity.this, TentangActivity.class); //Berpindah activity
+                        Intent tentang = new Intent(Raport2Activity.this, TentangActivity.class); //Berpindah activity
                         startActivity(tentang); //Menjalankan Activity
                         return true;
                     case R.id.navigation3:
@@ -164,7 +165,7 @@ public class RaportActivity extends AppCompatActivity {
 
     private void Volley(){
         final String id = nis;
-        StringRequest strReq = new StringRequest(Request.Method.POST, URL_GET_RAPORT, new Response.Listener<String>() {
+        StringRequest strReq = new StringRequest(Request.Method.POST, URL_GET_RAPORT2, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e(TAG, "Login Response: " + response.toString());

@@ -182,6 +182,7 @@ public class RaportActivity extends AppCompatActivity implements View.OnClickLis
 
         final String nlr = raport.getText().toString().trim();
         final String sts = status.getText().toString().trim();
+        final String nis = getIntent().getStringExtra(konfigurasi.EMP_NIS);
 
         class AddEmployee extends AsyncTask<Void, Void, String> {
 
@@ -205,6 +206,7 @@ public class RaportActivity extends AppCompatActivity implements View.OnClickLis
                 HashMap<String, String> params = new HashMap<>();
                 params.put(konfigurasi.KEY_EMP_NLR, nlr);
                 params.put(konfigurasi.KEY_EMP_STS, sts);
+                params.put("nis", nis);
 
 
                 RequestHandler rh = new RequestHandler();

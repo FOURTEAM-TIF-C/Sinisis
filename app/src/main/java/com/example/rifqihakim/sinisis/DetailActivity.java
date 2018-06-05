@@ -1,8 +1,10 @@
 package com.example.rifqihakim.sinisis;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -21,6 +23,9 @@ import android.widget.Toast;
 import java.util.HashMap;
 
 public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
+
+
+
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
@@ -51,11 +56,14 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+
+
         nPR = (EditText)findViewById(R.id.pr);
         nTugas = (EditText)findViewById(R.id.tugas);
         nUH = (EditText)findViewById(R.id.ulangan);
         nUTS = (EditText)findViewById(R.id.uts);
         nUAS = (EditText)findViewById(R.id.uas);
+//IKI SHARED
 
         nAkhir = (TextView)findViewById(R.id.rata);
         nGrade = (TextView)findViewById(R.id.grade);
@@ -70,6 +78,8 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 //                startActivity(il);
 //            }
 //        });
+        // AMBIL ID USER
+
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

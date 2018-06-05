@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.content.SharedPreferences;
 
 import java.util.HashMap;
 
@@ -19,6 +20,8 @@ public class InputRaport extends AppCompatActivity implements View.OnClickListen
 
 
     private Button buttonAdd;
+    SharedPreferences sharedpreferences;
+    public static final String my_shared_preferences = "my_shared_preferences";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,6 @@ public class InputRaport extends AppCompatActivity implements View.OnClickListen
 
         //Inisialisasi dari View
         txt_idRaport = (EditText) findViewById(R.id.txt_idRaport);
-
 
         buttonAdd = (Button) findViewById(R.id.btn_simpan);
 

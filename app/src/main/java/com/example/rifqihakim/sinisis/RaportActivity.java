@@ -1,6 +1,8 @@
 package com.example.rifqihakim.sinisis;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -23,7 +25,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.rifqihakim.sinisis.app.AppController;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,8 +37,9 @@ import static com.example.rifqihakim.sinisis.konfigurasi.TAG_JSON_ARRAY;
 import static com.example.rifqihakim.sinisis.konfigurasi.TAG_NIS;
 import static com.example.rifqihakim.sinisis.konfigurasi.URL_GET_RAPORT;
 
-public class RaportActivity extends AppCompatActivity {
+public class RaportActivity extends AppCompatActivity implements View.OnClickListener {
     //Mendefinisikan variabel
+
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
@@ -57,6 +59,7 @@ public class RaportActivity extends AppCompatActivity {
     private TextView status;
 
     private Button hitung;
+    private Button simpan;
 
     private int nMTK;
     private int nBI;
@@ -72,6 +75,10 @@ public class RaportActivity extends AppCompatActivity {
     private double nRaport;
     private String nStatus, nis;
 
+    SharedPreferences sharedpreferences;
+    public static final String my_shared_preferences = "my_shared_preferences";
+
+
     public static final String json_obj_req ="json_obj_req";
     private static final String TAG = RaportActivity.class.getSimpleName();
 
@@ -79,6 +86,18 @@ public class RaportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raport);
+
+        //Inisialisasi dari View
+        raport = (TextView) findViewById(R.id.raport);
+        status = (TextView) findViewById(R.id.status);
+        simpan = (Button) findViewById(R.id.btn_simpan1);
+
+        //Setting listeners to button
+        simpan.setOnClickListener(this);
+
+
+        //Dibawah ini merupakan perintah untuk Menambahkan  (CREATE)
+
 
         mtk = (TextView)findViewById(R.id.mtk);
         bindo = (TextView)findViewById(R.id.bindo);
@@ -157,6 +176,46 @@ public class RaportActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //memanggil synstate
         actionBarDrawerToggle.syncState();
+    }
+    //iki
+    private void addEmployee(){
+
+        final String nlr = raport.getText().toString().trim();
+        final String sts = status.getText().toString().trim();
+
+        class AddEmployee extends AsyncTask<Void, Void, String> {
+
+            ProgressDialog loading;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loading = ProgressDialog.show(RaportActivity.this, "Menambahkan...", "Tunggu...", false, false);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                loading.dismiss();
+                Toast.makeText(RaportActivity.this, s, Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            protected String doInBackground(Void... v) {
+                HashMap<String, String> params = new HashMap<>();
+                params.put(konfigurasi.KEY_EMP_NLR, nlr);
+                params.put(konfigurasi.KEY_EMP_STS, sts);
+
+
+                RequestHandler rh = new RequestHandler();
+                String res = rh.sendPostRequest(konfigurasi.URL_GET_DATA, params);
+                return res;
+            }
+
+        }
+
+        AddEmployee ae = new AddEmployee();
+        ae.execute();
     }
 
     private void Volley(){
@@ -271,4 +330,12 @@ public class RaportActivity extends AppCompatActivity {
         return sts;
     }
 
+    @Override
+    public void onClick(View v) {
+        if (v == simpan) {
+            addEmployee();
+        }
+
+
+    }
 }

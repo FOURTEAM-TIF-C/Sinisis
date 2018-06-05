@@ -14,6 +14,7 @@ public class konfigurasi {
     public static final String URL_GET_EMP = "http://sinisis.tk/android/data/detailSiswa1.php";
     public static final String URL_GET_RAPORT = "http://sinisis.tk/android/data/raport.php";
     public static final String URL_GET_RAPORT2 = "http://sinisis.tk/android/data/raport2.php";
+    public static final String URL_GET_DATA = "http://sinisis.tk/android/data/InputRaport.php";
 
 
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
@@ -21,6 +22,9 @@ public class konfigurasi {
     public static final String KEY_EMP_SMT = "semester";
     public static final String KEY_EMP_RATA = "nilaiRata";
     public static final String KEY_EMP_GRADE = "grade";
+    public static final String KEY_EMP_ID = "id";
+    public static final String KEY_EMP_STS = "status";
+    public static final String KEY_EMP_NLR = "nilai_raport";
 
     //JSON Tags
     public static final String TAG_JSON_ARRAY="result";

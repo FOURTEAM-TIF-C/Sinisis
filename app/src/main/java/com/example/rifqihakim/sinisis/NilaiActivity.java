@@ -21,6 +21,7 @@ public class NilaiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nilai);
+        Button button= (Button) findViewById(R.id.button1);
         Button button1= (Button) findViewById(R.id.button7);
         Button button2= (Button) findViewById(R.id.button);
         Button button3= (Button) findViewById(R.id.button2);
@@ -32,7 +33,13 @@ public class NilaiActivity extends AppCompatActivity {
         Button button9= (Button) findViewById(R.id.button16);
         Button button10= (Button) findViewById(R.id.btn_raport);
 
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent il= new Intent(getApplicationContext(),DetailActivity.class);
+                startActivity(il);
+            }
+        });
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

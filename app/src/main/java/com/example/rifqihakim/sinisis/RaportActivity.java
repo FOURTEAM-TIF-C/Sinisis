@@ -1,6 +1,5 @@
 package com.example.rifqihakim.sinisis;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.design.widget.NavigationView;
@@ -42,8 +41,6 @@ public class RaportActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-
-    private String JSON_STRING;
 
     private TextView mtk;
     private TextView bindo;

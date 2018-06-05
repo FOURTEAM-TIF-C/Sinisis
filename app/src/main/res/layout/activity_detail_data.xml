@@ -160,12 +160,12 @@
                     android:layout_width="100dp"
                     android:layout_height="80dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="60dp"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginBottom="39dp"
+                    android:layout_marginLeft="90dp"
                     android:background="@android:color/holo_green_light"
-                    android:textSize="20sp"
                     android:text="Nilai"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/raport"
@@ -177,18 +177,6 @@
                     android:background="@android:color/holo_green_light"
                     android:text="Raport 1"
                     android:textColor="@android:color/black" />
-
-
-                <ImageButton
-                    android:id="@+id/back"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/back"
-                    tools:ignore="VectorDrawableCompat" />
 
                 <Button
                     android:id="@+id/raport2"

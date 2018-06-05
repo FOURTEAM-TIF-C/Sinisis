@@ -39,21 +39,17 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="44dp"
             android:text="PENILAIAN SISWA"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.033" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView34"
@@ -61,20 +57,26 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginBottom="440dp"
+            android:layout_marginBottom="44dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="80dp"
             android:text="Semester"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
+=======
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             tools:ignore="RtlCompat" />
 
 
@@ -92,10 +94,16 @@
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.16" />
+=======
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.42000002" />
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
 
         <TextView
             android:id="@+id/textView3"
@@ -105,12 +113,21 @@
             android:layout_alignParentTop="true"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+<<<<<<< HEAD
             android:layout_marginTop="32dp"
             android:text="Nilai Tugas"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.117"
+=======
+            android:layout_marginTop="28dp"
+            android:text="Tugas"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView34"
             tools:ignore="RtlCompat" />
@@ -131,10 +148,16 @@
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.242" />
+=======
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.519" />
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
 
         <TextView
             android:id="@+id/textView4"
@@ -146,15 +169,22 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="135dp"
-            android:text="Nilai PR"
+            android:text="PR"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.092"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.14"
+=======
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.497"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             tools:ignore="RtlCompat" />
 
 
@@ -173,10 +203,16 @@
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.351" />
+=======
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.626" />
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
 
         <TextView
             android:id="@+id/textView5"
@@ -188,15 +224,19 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="125dp"
-            android:text="Nilai Ulangan"
+            android:text="UH"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.123"
+=======
+            app:layout_constraintHorizontal_bias="0.612"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.282"
+            app:layout_constraintVertical_bias="0.241"
             tools:ignore="RtlCompat" />
 
 
@@ -215,9 +255,13 @@
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+=======
+            app:layout_constraintHorizontal_bias="0.879"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.436" />
+            app:layout_constraintVertical_bias="0.41000003" />
 
         <TextView
             android:id="@+id/textView7"
@@ -229,15 +273,22 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="145dp"
-            android:text="Nilai UTS"
+            android:text="UTS"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.111"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.398"
+=======
+            app:layout_constraintHorizontal_bias="0.627"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.335"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             tools:ignore="RtlCompat" />
 
 
@@ -247,19 +298,30 @@
             android:layout_height="40dp"
             android:layout_alignBaseline="@+id/textView5"
             android:layout_marginBottom="8dp"
+<<<<<<< HEAD
             android:layout_marginEnd="100dp"
+=======
+            android:layout_marginEnd="8dp"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/border_style"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.553" />
+=======
+            app:layout_constraintHorizontal_bias="0.879"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.49" />
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
 
         <TextView
             android:id="@+id/textView8"
@@ -271,15 +333,22 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="140dp"
-            android:text="Nilai UAS"
+            android:text="UAS"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.112"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.521"
+=======
+            app:layout_constraintHorizontal_bias="0.629"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.49"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             tools:ignore="RtlCompat" />
 
 
@@ -289,7 +358,11 @@
             android:layout_height="40dp"
             android:layout_alignBaseline="@+id/textView5"
             android:layout_marginBottom="8dp"
+<<<<<<< HEAD
             android:layout_marginEnd="100dp"
+=======
+            android:layout_marginEnd="10dp"
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/border_style"
@@ -298,10 +371,17 @@
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.662" />
+=======
+            app:layout_constraintHorizontal_bias="0.885"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.627" />
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
 
         <EditText
             android:id="@+id/id_raport"
@@ -319,10 +399,38 @@
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.885"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.154" />
+=======
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19" />
+
+        <EditText
+            android:id="@+id/nis_siswa"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/textView5"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_style"
+            android:ems="10"
+            android:hint="id_raport"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.306" />
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
 
         <TextView
             android:id="@+id/textView90"
@@ -332,43 +440,61 @@
             android:layout_alignParentTop="true"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="200dp"
-            android:text="RATA - RATA"
+            android:text="RATA"
             android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintHorizontal_bias="0.074"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.749"
+            app:layout_constraintVertical_bias="0.7"
             tools:ignore="RtlCompat" />
 
-        <Button
-            android:id="@+id/simpan"
-            android:layout_width="300dp"
-            android:layout_height="9dp"
-            android:layout_alignParentBottom="true"
+        <EditText
+            android:id="@+id/kelas"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/textView5"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="250dp"
-            android:background="@android:color/holo_blue_light"
-            android:text="SIMPAN"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_style"
+            android:ems="10"
+            android:hint="id_raport"
+            android:inputType="textPersonName"
             android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.879"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.19" />
+
+        <EditText
+            android:id="@+id/pelajaran"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/textView5"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_style"
+            android:ems="10"
+            android:hint="id_raport"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.879"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
 
         <TextView
             android:id="@+id/rata"
@@ -376,18 +502,16 @@
             android:layout_height="40dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="150dp"
             android:background="@drawable/border_style"
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.677"
+            app:layout_constraintHorizontal_bias="0.345"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.796" />
+            app:layout_constraintVertical_bias="0.773" />
 
         <TextView
             android:id="@+id/textView91"
@@ -397,8 +521,6 @@
             android:layout_alignParentTop="true"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="210dp"
             android:text="GRADE"
@@ -407,10 +529,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.625"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.906"
+            app:layout_constraintVertical_bias="0.7"
             tools:ignore="RtlCompat" />
 
         <TextView
@@ -419,29 +541,25 @@
             android:layout_height="40dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/border_style"
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.677"
+            app:layout_constraintHorizontal_bias="0.879"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.957" />
+            app:layout_constraintVertical_bias="0.84000003" />
 
         <Button
             android:id="@+id/hitung"
-            android:layout_width="300dp"
+            android:layout_width="320dp"
             android:layout_height="35dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="5dp"
             android:background="@android:color/holo_blue_light"
             android:onClick="bHitung"
             android:text="Hitung"
@@ -450,13 +568,35 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.747"
+            app:layout_constraintVertical_bias="0.722"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/simpan"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="bHitung"
+            android:text="SIMPAN"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.959"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/nis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginBottom="383dp"
             android:layout_marginEnd="56dp"
             android:layout_marginStart="43dp"
@@ -468,10 +608,21 @@
             app:layout_constraintHorizontal_bias="0.403"
             app:layout_constraintStart_toEndOf="@+id/semester"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
+=======
+            android:layout_marginBottom="340dp"
+            android:layout_marginEnd="328dp"
+            android:text="NIS"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
         <TextView
             android:id="@+id/user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginBottom="348dp"
             android:layout_marginEnd="56dp"
             android:layout_marginStart="43dp"
@@ -483,11 +634,20 @@
             app:layout_constraintHorizontal_bias="0.403"
             app:layout_constraintStart_toEndOf="@+id/semester"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
+=======
+            android:layout_marginBottom="500dp"
+            android:layout_marginEnd="112dp"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
 
         <TextView
             android:id="@+id/mapel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginBottom="284dp"
             android:layout_marginEnd="56dp"
             android:layout_marginStart="43dp"
@@ -499,6 +659,44 @@
             app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toEndOf="@+id/semester"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
+=======
+            android:layout_marginBottom="356dp"
+            android:layout_marginEnd="284dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="No. Raport"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.807"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.762" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Kelas"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:layout_editor_absoluteX="220dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:text="Mapel"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="220dp" />
+
+>>>>>>> aa555d28964fe93bc3fcf5276223bdf2ca4493e0
 
     </android.support.constraint.ConstraintLayout>
       </ScrollView>

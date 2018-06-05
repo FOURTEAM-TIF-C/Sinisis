@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG_MESSAGE = "message";
 
     public final static String TAG_USERNAME = "username";
-    public final static String TAG_ID = "id_user";
+    public final static String TAG_ID_USER = "id_user";
 
     String tag_json_obj = "json_obj_req";
 
@@ -80,16 +80,17 @@ public class LoginActivity extends AppCompatActivity {
         // Cek session login jika TRUE maka langsung buka MainActivity
         sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
         session = sharedpreferences.getBoolean(session_status, false);
-        id_user = sharedpreferences.getString(TAG_ID, null);
+        id_user = sharedpreferences.getString(TAG_ID_USER, null);
         username = sharedpreferences.getString(TAG_USERNAME, null);
 
         if (session) {
-            Intent intent = new Intent(LoginActivity.this, BerandaActivity.class);
-            intent.putExtra(TAG_ID, id_user);
+            Intent intent = new Intent(LoginActivity.this, DetailActivity.class);
+            intent.putExtra(TAG_ID_USER, id_user);
             intent.putExtra(TAG_USERNAME, username);
             finish();
             startActivity(intent);
         }
+
 
 
         btn_login.setOnClickListener(new View.OnClickListener() {
@@ -139,7 +140,7 @@ public class LoginActivity extends AppCompatActivity {
                     // Check for error node in json
                     if (success == 1) {
                         String username = jObj.getString(TAG_USERNAME);
-                        String id = jObj.getString(TAG_ID);
+                        String id_user = jObj.getString(TAG_ID_USER);
 
                         Log.e("Successfully Login!", jObj.toString());
 
@@ -148,13 +149,13 @@ public class LoginActivity extends AppCompatActivity {
                         // menyimpan login ke session
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         editor.putBoolean(session_status, true);
-                        editor.putString(TAG_ID, id_user);
+                        editor.putString(TAG_ID_USER, id_user);
                         editor.putString(TAG_USERNAME, username);
                         editor.commit();
 
                         // Memanggil main activity
                         Intent intent = new Intent(LoginActivity.this, BerandaActivity.class);
-                        intent.putExtra(TAG_ID, id_user);
+                        intent.putExtra(TAG_ID_USER, id_user);
                         intent.putExtra(TAG_USERNAME, username);
                         finish();
                         startActivity(intent);

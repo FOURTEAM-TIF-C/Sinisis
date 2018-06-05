@@ -17,14 +17,14 @@ import android.content.SharedPreferences;
 import android.widget.TextView;
 
 public class BerandaActivity extends AppCompatActivity implements View.OnClickListener {
-
     Button btn_logout;
     TextView txt_id, txt_username;
     String id_user, username;
     SharedPreferences sharedpreferences;
 
-    public static final String TAG_ID = "id_user";
+    public static final String TAG_ID_USER = "id_user";
     public static final String TAG_USERNAME = "username";
+
 
     //Mendefinisikan variabel
     private Toolbar toolbar;
@@ -35,14 +35,18 @@ public class BerandaActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_beranda);
+        txt_id = (TextView) findViewById(R.id.user1);
 
         sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
 
-        id_user = getIntent().getStringExtra(TAG_ID);
+        id_user = getIntent().getStringExtra(TAG_ID_USER);
         username = getIntent().getStringExtra(TAG_USERNAME);
+        txt_id.setText("ID : " + id_user);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beranda);
+
+
 
         buttonView1 = (Button) findViewById(R.id.buttonView1);
 
@@ -133,7 +137,7 @@ public class BerandaActivity extends AppCompatActivity implements View.OnClickLi
                     case R.id.navigation3:
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         editor.putBoolean(LoginActivity.session_status, false);
-                        editor.putString(TAG_ID, null);
+                        editor.putString(TAG_ID_USER, null);
                         editor.putString(TAG_USERNAME, null);
                         editor.commit();
 

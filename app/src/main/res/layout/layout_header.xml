@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="16dp"
-            android:text="Sulistyani, S.Pd"
+            android:text="SDN SUMBERSARI 02"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textStyle="bold"/>
         <TextView
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
-            android:text="Walikelas 1"
+            android:text="JEMBER"
             android:textColor="#fff"/>
     </LinearLayout>
 </RelativeLayout>

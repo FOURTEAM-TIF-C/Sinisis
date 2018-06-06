@@ -21,7 +21,7 @@ public class BerandaActivity extends AppCompatActivity implements View.OnClickLi
     TextView txt_id, txt_username;
     String id_user, username;
     SharedPreferences sharedpreferences;
-
+//manggil ID
     public static final String TAG_ID_USER = "id_user";
     public static final String TAG_USERNAME = "username";
 
@@ -37,15 +37,9 @@ public class BerandaActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda);
-        txt_id = (TextView) findViewById(R.id.user1);
+
 
         sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
-
-        id_user = getIntent().getStringExtra(TAG_ID_USER);
-        username = getIntent().getStringExtra(TAG_USERNAME);
-        txt_id.setText("ID : " + id_user);
-
-
 
 
         buttonView1 = (Button) findViewById(R.id.buttonView1);
